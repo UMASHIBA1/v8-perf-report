@@ -1,12 +1,5 @@
 # add 計算について
 
-コマンド
-
-```
-sudo perf record -g -k mono out/x64.release/d8 --perf-prof --no-write-protect-code-memory test.js
-perf report
-```
-
 ## 関数呼び出しのない版
 
 ```javascript
@@ -18,10 +11,13 @@ for (let i = 0; i < 10000000; i++) {
 console.log(total);
 ```
 
-stat コマンド
+### stat コマンドでの計測
 
 ```shell
 sudo perf stat out/x64.release/d8 --perf-prof --no-write-protect-code-memory test.js
+```
+
+```shell
 10000000
 
  Performance counter stats for 'out/x64.release/d8 --perf-prof --no-write-protect-code-memory test.js':
@@ -42,3 +38,12 @@ sudo perf stat out/x64.release/d8 --perf-prof --no-write-protect-code-memory tes
 
 
 ```
+
+### record, report コマンドでの計測
+
+```shell
+sudo perf record -g -k mono out/x64.release/d8 --perf-prof --no-write-protect-code-memory test.js
+sudo perf report --sort dso, comm -g fractal,0.5,caller
+```
+
+[record, report コマンドの結果のリンク](https://github.com/UMASHIBA1/v8-perf-report/tree/main/add-test/no-func-add-perf-report.txt)
