@@ -1,5 +1,15 @@
 # add 計算について
 
+## 実行環境
+
+```
+Window上のVMWare Workstation 16 Player上のUbuntu20.04.2 LTS
+Memory 8GB割り当て
+Processor Intel® Core™ i7-9700 CPU @ 3.00GHzの2コアを割り当て
+```
+
+<img src="https://user-images.githubusercontent.com/49422601/119885136-63670080-bf6c-11eb-8948-6f6aa17e5a34.png" width="600px">
+
 ## 関数呼び出しのない版
 
 ```javascript
