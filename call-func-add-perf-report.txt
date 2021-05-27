@@ -1,0 +1,997 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 119  of event 'cycles'
+# Event count (approx.): 118460099
+#
+# Children      Self  Shared Object     
+# ........  ........  ..................
+#
+    97.50%     2.59%  libc-2.31.so      
+            |          
+            |--89.86%--__libc_start_main
+            |          v8::Shell::Main
+            |          |          
+            |          |--88.65%--v8::Shell::RunMain
+            |          |          |          
+            |          |          |--96.49%--v8::SourceGroup::Execute
+            |          |          |          v8::Shell::ExecuteString
+            |          |          |          |          
+            |          |          |          |--98.80%--v8::Script::Run
+            |          |          |          |          v8::internal::Execution::Call
+            |          |          |          |          v8::internal::(anonymous namespace)::Invoke
+            |          |          |          |          0x24b000009247
+            |          |          |          |          0x24b0000094bb
+            |          |          |          |          |          
+            |          |          |          |          |--15.09%--0x24b000184158
+            |          |          |          |          |          
+            |          |          |          |          |--13.81%--0x24b000184148
+            |          |          |          |          |          
+            |          |          |          |          |--13.69%--0x24b000184183
+            |          |          |          |          |          
+            |          |          |          |          |--8.78%--0x24b000184154
+            |          |          |          |          |          
+            |          |          |          |          |--7.52%--0x24b000184142
+            |          |          |          |          |          
+            |          |          |          |          |--7.49%--0x24b00018411d
+            |          |          |          |          |          
+            |          |          |          |          |--7.32%--0x24b00000b461
+            |          |          |          |          |          |          
+            |          |          |          |          |          |--83.41%--0x24b00010ea45
+            |          |          |          |          |          |          0x24b00000bc14
+            |          |          |          |          |          |          0x24b000079e18
+            |          |          |          |          |          |          v8::internal::Runtime_CompileForOnStackReplacement
+            |          |          |          |          |          |          v8::internal::Compiler::GetOptimizedCodeForOSR
+            |          |          |          |          |          |          v8::internal::(anonymous namespace)::GetOptimizedCode
+            |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |--60.06%--v8::internal::compiler::PipelineCompilationJob::ExecuteJobImpl
+            |          |          |          |          |          |          |          v8::internal::compiler::PipelineImpl::OptimizeGraph
+            |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |--33.39%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::StoreStoreEliminationPhase>
+            |          |          |          |          |          |          |          |          v8::internal::compiler::StoreStoreEliminationPhase::Run
+            |          |          |          |          |          |          |          |          v8::internal::compiler::StoreStoreElimination::Run
+            |          |          |          |          |          |          |          |          v8::internal::compiler::(anonymous namespace)::RedundantStoreFinder::Visit
+            |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |--33.31%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::LoadEliminationPhase>
+            |          |          |          |          |          |          |          |          v8::internal::compiler::LoadEliminationPhase::Run
+            |          |          |          |          |          |          |          |          v8::internal::compiler::GraphReducer::ReduceNode
+            |          |          |          |          |          |          |          |          v8::internal::compiler::GraphReducer::ReduceTop
+            |          |          |          |          |          |          |          |          v8::internal::compiler::GraphReducer::Reduce
+            |          |          |          |          |          |          |          |          v8::internal::compiler::(anonymous namespace)::SourcePositionWrapper::Reduce
+            |          |          |          |          |          |          |          |          v8::internal::compiler::Reducer::Reduce
+            |          |          |          |          |          |          |          |          v8::internal::compiler::DeadCodeElimination::Reduce
+            |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |           --33.30%--v8::internal::compiler::PipelineImpl::SelectInstructions
+            |          |          |          |          |          |          |                     v8::internal::compiler::PipelineImpl::AllocateRegistersForTopTier
+            |          |          |          |          |          |          |                     v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::MeetRegisterConstraintsPhase>
+            |          |          |          |          |          |          |                     v8::internal::compiler::ConstraintBuilder::MeetRegisterConstraints
+            |          |          |          |          |          |          |                     v8::internal::compiler::ConstraintBuilder::MeetRegisterConstraintsForLastInstructionInBlock
+            |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |--19.99%--v8::internal::OSROptimizedCodeCache::AddOptimizedCode
+            |          |          |          |          |          |          |          v8::internal::OSROptimizedCodeCache::GrowOSRCache
+            |          |          |          |          |          |          |          v8::internal::Factory::CopyArrayAndGrow<v8::internal::WeakFixedArray>
+            |          |          |          |          |          |          |          
+            |          |          |          |          |          |           --19.95%--v8::internal::OptimizedCompilationJob::PrepareJob
+            |          |          |          |          |          |          
+            |          |          |          |          |           --16.59%--0x24b00010eb13
+            |          |          |          |          |                     0x24b000079e18
+            |          |          |          |          |                     v8::internal::Runtime_BytecodeBudgetInterruptFromBytecode
+            |          |          |          |          |                     v8::internal::RuntimeProfiler::MarkCandidatesForOptimizationFromBytecode
+            |          |          |          |          |                     v8::internal::JavaScriptFrameIterator::Advance
+            |          |          |          |          |                     v8::internal::StackFrameIterator::Advance
+            |          |          |          |          |                     v8::internal::StackFrame::ComputeType
+            |          |          |          |          |                     __pthread_mutex_lock
+            |          |          |          |          |          
+            |          |          |          |          |--6.30%--0x24b000184110
+            |          |          |          |          |          
+            |          |          |          |          |--6.24%--0x24b000184138
+            |          |          |          |          |          
+            |          |          |          |          |--6.24%--0x24b00018413e
+            |          |          |          |          |          
+            |          |          |          |          |--5.03%--0x24b00018412a
+            |          |          |          |          |          
+            |          |          |          |           --2.49%--0x24b00018412e
+            |          |          |          |          
+            |          |          |           --1.20%--v8::Shell::CompileString<v8::Script>
+            |          |          |                     v8::ScriptCompiler::Compile
+            |          |          |                     v8::ScriptCompiler::CompileUnboundInternal
+            |          |          |                     v8::internal::Compiler::GetSharedFunctionInfoForScript
+            |          |          |                     v8::internal::(anonymous namespace)::CompileScriptOnMainThread
+            |          |          |                     v8::internal::(anonymous namespace)::CompileToplevel
+            |          |          |                     v8::internal::parsing::ParseProgram
+            |          |          |                     v8::internal::Parser::ParseProgram
+            |          |          |                     v8::internal::Parser::DeserializeScopeChain
+            |          |          |                     v8::internal::DeclarationScope::DeclarationScope
+            |          |          |                     v8::internal::VariableMap::Declare
+            |          |          |          
+            |          |          |--2.30%--v8::Shell::CreateEvaluationContext
+            |          |          |          v8::Context::New
+            |          |          |          v8::NewContext
+            |          |          |          v8::internal::Bootstrapper::CreateEnvironment
+            |          |          |          v8::internal::Genesis::Genesis
+            |          |          |          |          
+            |          |          |          |--50.11%--v8::internal::Genesis::CreateNewGlobals
+            |          |          |          |          v8::internal::ApiNatives::CreateApiFunction
+            |          |          |          |          v8::internal::Factory::NewMap
+            |          |          |          |          v8::internal::Factory::InitializeMap
+            |          |          |          |          
+            |          |          |           --49.89%--v8::internal::Snapshot::NewContextFromSnapshot
+            |          |          |                     v8::internal::SnapshotCompression::Decompress
+            |          |          |                     zlib_internal::UncompressHelper
+            |          |          |                     Cr_z_inflate
+            |          |          |                     Cr_z_inflate_fast_chunk_
+            |          |          |          
+            |          |           --1.21%--v8::HandleScope::~HandleScope
+            |          |                     v8::internal::HandleScope::DeleteExtensions
+            |          |          
+            |          |--10.51%--v8::Isolate::New
+            |          |          v8::Isolate::Initialize
+            |          |          v8::internal::Snapshot::Initialize
+            |          |          |          
+            |          |          |--83.33%--v8::internal::Isolate::InitWithSnapshot
+            |          |          |          v8::internal::Isolate::Init
+            |          |          |          |          
+            |          |          |          |--34.35%--v8::internal::Builtins::EmitCodeCreateEvents
+            |          |          |          |          v8::internal::CodeEventDispatcher::CodeCreateEvent
+            |          |          |          |          |          
+            |          |          |          |           --100.00%--v8::internal::PerfJitLogger::LogRecordedBuffer
+            |          |          |          |                     v8::internal::PerfJitLogger::LogWriteUnwindingInfo
+            |          |          |          |                     v8::internal::Code::OffHeapMetadataStart
+            |          |          |          |                     |          
+            |          |          |          |                     |--50.62%--v8::internal::Isolate::CurrentEmbeddedBlobData
+            |          |          |          |                     |          
+            |          |          |          |                      --49.38%--v8::internal::EmbeddedData::MetadataStartOfBuiltin
+            |          |          |          |          
+            |          |          |          |--22.04%--__memmove_avx_unaligned_erms
+            |          |          |          |          |          
+            |          |          |          |           --100.00%--asm_exc_page_fault
+            |          |          |          |                     exc_page_fault
+            |          |          |          |                     do_user_addr_fault
+            |          |          |          |                     handle_mm_fault
+            |          |          |          |                     __handle_mm_fault
+            |          |          |          |                     do_anonymous_page
+            |          |          |          |                     alloc_pages_vma
+            |          |          |          |                     __alloc_pages_nodemask
+            |          |          |          |                     get_page_from_freelist
+            |          |          |          |                     clear_page_orig
+            |          |          |          |          
+            |          |          |          |--11.33%--v8::internal::interpreter::Interpreter::Initialize
+            |          |          |          |          std::__1::__function::__policy_invoker<void (v8::internal::interpreter::Bytecode, v8::internal::interpreter::OperandScale)>::__call_impl<std::__1::__function::__default_alloc_func<v8::internal::interpreter::Interpreter::Initialize()::$_0, void (v8::internal::interpreter::Bytecode, v8::internal::interpreter::OperandScale)> >
+            |          |          |          |          v8::internal::Code::OffHeapInstructionStart
+            |          |          |          |          v8::internal::(anonymous namespace)::EmbeddedDataWithMaybeRemappedEmbeddedBuiltins
+            |          |          |          |          
+            |          |          |          |--11.22%--v8::internal::StartupDeserializer::DeserializeIntoIsolate
+            |          |          |          |          v8::internal::Heap::IterateRoots
+            |          |          |          |          v8::internal::Deserializer::VisitRootPointers
+            |          |          |          |          v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForRootSlots>
+            |          |          |          |          v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath
+            |          |          |          |          
+            |          |          |          |--10.65%--v8::internal::ReadOnlyHeap::SetUp
+            |          |          |          |          v8::internal::ReadOnlyDeserializer::DeserializeIntoIsolate
+            |          |          |          |          v8::internal::Deserializer::VisitRootPointers
+            |          |          |          |          v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForRootSlots>
+            |          |          |          |          v8::internal::Deserializer::ReadObject
+            |          |          |          |          std::__1::vector<v8::internal::Handle<v8::internal::HeapObject>, std::__1::allocator<v8::internal::Handle<v8::internal::HeapObject> > >::push_back
+            |          |          |          |          asm_exc_page_fault
+            |          |          |          |          
+            |          |          |           --10.42%--v8::internal::Heap::SetUp
+            |          |          |                     v8::base::CallOnceImpl
+            |          |          |                     v8::internal::CodeRange::InitializeProcessWideCodeRangeOnce
+            |          |          |                     v8::internal::CodeRange::InitReservation
+            |          |          |                     v8::internal::VirtualMemoryCage::InitReservation
+            |          |          |                     v8::internal::AllocatePages
+            |          |          |                     v8::base::BoundedPageAllocator::AllocatePages
+            |          |          |                     __madvise
+            |          |          |                     entry_SYSCALL_64_after_hwframe
+            |          |          |                     do_syscall_64
+            |          |          |                     __x64_sys_madvise
+            |          |          |                     do_madvise
+            |          |          |                     do_madvise.part.0
+            |          |          |                     walk_page_range
+            |          |          |          
+            |          |           --16.67%--v8::internal::SnapshotCompression::Decompress
+            |          |                     zlib_internal::UncompressHelper
+            |          |                     Cr_z_inflate
+            |          |                     Cr_z_inflate_fast_chunk_
+            |          |          
+            |           --0.85%--v8::V8::Initialize
+            |                     v8::internal::V8::Initialize
+            |                     v8::base::CallOnceImpl
+            |                     v8::internal::V8::InitializeOncePerProcessImpl
+            |                     v8::internal::IsolateAllocator::InitializeOncePerProcess
+            |                     operator new
+            |          
+            |--3.84%--read
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_read
+            |          ksys_read
+            |          vfs_read
+            |          |          
+            |          |--77.81%--new_sync_read
+            |          |          ext4_file_read_iter
+            |          |          generic_file_read_iter
+            |          |          generic_file_buffered_read
+            |          |          copy_page_to_iter
+            |          |          copy_user_generic_unrolled
+            |          |          |          
+            |          |           --100.00%--asm_exc_page_fault
+            |          |                     exc_page_fault
+            |          |                     do_user_addr_fault
+            |          |                     handle_mm_fault
+            |          |                     __handle_mm_fault
+            |          |                     do_anonymous_page
+            |          |                     |          
+            |          |                     |--85.73%--alloc_pages_vma
+            |          |                     |          __alloc_pages_nodemask
+            |          |                     |          get_page_from_freelist
+            |          |                     |          |          
+            |          |                     |          |--61.93%--clear_page_orig
+            |          |                     |          |          
+            |          |                     |           --38.07%--rmqueue
+            |          |                     |          
+            |          |                      --14.27%--lru_cache_add_active_or_unevictable
+            |          |                                lru_cache_add
+            |          |                                pagevec_lru_move_fn
+            |          |                                _raw_spin_lock_irqsave
+            |          |          
+            |           --22.19%--urandom_read
+            |                     urandom_read_nowarn.isra.0
+            |                     extract_crng
+            |                     _extract_crng
+            |                     chacha_block_generic
+            |                     chacha_permute
+            |          
+            |--3.59%--__GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          |          
+            |          |--50.03%--ext4_da_write_begin
+            |          |          |          
+            |          |          |--50.08%--grab_cache_page_write_begin
+            |          |          |          pagecache_get_page
+            |          |          |          __page_cache_alloc
+            |          |          |          alloc_pages_current
+            |          |          |          __alloc_pages_nodemask
+            |          |          |          get_page_from_freelist
+            |          |          |          clear_page_orig
+            |          |          |          
+            |          |           --49.92%--ext4_block_write_begin
+            |          |                     create_empty_buffers
+            |          |                     alloc_page_buffers
+            |          |                     alloc_buffer_head
+            |          |                     kmem_cache_alloc
+            |          |                     memcg_kmem_get_cache
+            |          |          
+            |           --49.97%--ext4_da_write_end
+            |                     generic_write_end
+            |                     __mark_inode_dirty
+            |                     ext4_dirty_inode
+            |                     __ext4_mark_inode_dirty
+            |                     ext4_mark_iloc_dirty
+            |                     ext4_do_update_inode
+            |                     ext4_inode_csum_set
+            |                     |          
+            |                      --100.00%--ext4_inode_csum.isra.0
+            |                                crypto_shash_update
+            |                                crc32c_pcl_intel_update
+            |          
+            |--0.91%--__munmap
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_munmap
+            |          __vm_munmap
+            |          __do_munmap
+            |          unmap_region
+            |          tlb_finish_mmu
+            |          tlb_flush_mmu
+            |          free_pages_and_swap_cache
+            |          release_pages
+            |          free_unref_page_commit
+            |          
+            |--0.90%--0x559800d2ac40
+            |          __memmove_avx_unaligned_erms
+            |          
+            |--0.90%--_IO_do_write@@GLIBC_2.2.5
+             --0.00%--[...]
+
+    87.62%    14.79%  d8                
+            |          
+            |--83.12%--v8::Shell::Main
+            |          |          
+            |          |--95.46%--v8::Shell::RunMain
+            |          |          v8::SourceGroup::Execute
+            |          |          v8::Shell::ExecuteString
+            |          |          v8::Script::Run
+            |          |          v8::internal::Execution::Call
+            |          |          v8::internal::(anonymous namespace)::Invoke
+            |          |          0x24b000009247
+            |          |          0x24b0000094bb
+            |          |          |          
+            |          |          |--16.07%--0x24b000184158
+            |          |          |          
+            |          |          |--14.71%--0x24b000184148
+            |          |          |          
+            |          |          |--14.58%--0x24b000184183
+            |          |          |          
+            |          |          |--9.35%--0x24b000184154
+            |          |          |          
+            |          |          |--8.01%--0x24b000184142
+            |          |          |          
+            |          |          |--7.98%--0x24b00018411d
+            |          |          |          
+            |          |          |--6.71%--0x24b000184110
+            |          |          |          
+            |          |          |--6.65%--0x24b000184138
+            |          |          |          
+            |          |          |--6.64%--0x24b00018413e
+            |          |          |          
+            |          |          |--5.36%--0x24b00018412a
+            |          |          |          
+            |          |          |--2.65%--0x24b00018412e
+            |          |          |          
+            |          |           --1.29%--0x24b00000b461
+            |          |                     0x24b00010eb13
+            |          |                     0x24b000079e18
+            |          |                     v8::internal::Runtime_BytecodeBudgetInterruptFromBytecode
+            |          |                     v8::internal::RuntimeProfiler::MarkCandidatesForOptimizationFromBytecode
+            |          |                     v8::internal::JavaScriptFrameIterator::Advance
+            |          |                     v8::internal::StackFrameIterator::Advance
+            |          |                     v8::internal::StackFrame::ComputeType
+            |          |                     __pthread_mutex_lock
+            |          |          
+            |           --4.54%--v8::Isolate::New
+            |                     v8::Isolate::Initialize
+            |                     v8::internal::Snapshot::Initialize
+            |                     v8::internal::Isolate::InitWithSnapshot
+            |                     v8::internal::Isolate::Init
+            |                     |          
+            |                     |--51.13%--__memmove_avx_unaligned_erms
+            |                     |          |          
+            |                     |           --100.00%--asm_exc_page_fault
+            |                     |                     exc_page_fault
+            |                     |                     do_user_addr_fault
+            |                     |                     handle_mm_fault
+            |                     |                     __handle_mm_fault
+            |                     |                     do_anonymous_page
+            |                     |                     alloc_pages_vma
+            |                     |                     __alloc_pages_nodemask
+            |                     |                     get_page_from_freelist
+            |                     |                     clear_page_orig
+            |                     |          
+            |                     |--24.70%--v8::internal::ReadOnlyHeap::SetUp
+            |                     |          v8::internal::ReadOnlyDeserializer::DeserializeIntoIsolate
+            |                     |          v8::internal::Deserializer::VisitRootPointers
+            |                     |          v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForRootSlots>
+            |                     |          v8::internal::Deserializer::ReadObject
+            |                     |          std::__1::vector<v8::internal::Handle<v8::internal::HeapObject>, std::__1::allocator<v8::internal::Handle<v8::internal::HeapObject> > >::push_back
+            |                     |          asm_exc_page_fault
+            |                     |          
+            |                      --24.16%--v8::internal::Heap::SetUp
+            |                                v8::base::CallOnceImpl
+            |                                v8::internal::CodeRange::InitializeProcessWideCodeRangeOnce
+            |                                v8::internal::CodeRange::InitReservation
+            |                                v8::internal::VirtualMemoryCage::InitReservation
+            |                                v8::internal::AllocatePages
+            |                                v8::base::BoundedPageAllocator::AllocatePages
+            |                                __madvise
+            |                                entry_SYSCALL_64_after_hwframe
+            |                                do_syscall_64
+            |                                __x64_sys_madvise
+            |                                do_madvise
+            |                                do_madvise.part.0
+            |                                walk_page_range
+            |          
+             --16.88%--__libc_start_main
+                       v8::Shell::Main
+                       |          
+                       |--55.09%--v8::Shell::RunMain
+                       |          |          
+                       |          |--66.54%--v8::SourceGroup::Execute
+                       |          |          v8::Shell::ExecuteString
+                       |          |          |          
+                       |          |          |--83.40%--v8::Script::Run
+                       |          |          |          v8::internal::Execution::Call
+                       |          |          |          v8::internal::(anonymous namespace)::Invoke
+                       |          |          |          0x24b000009247
+                       |          |          |          0x24b0000094bb
+                       |          |          |          0x24b00000b461
+                       |          |          |          0x24b00010ea45
+                       |          |          |          0x24b00000bc14
+                       |          |          |          0x24b000079e18
+                       |          |          |          v8::internal::Runtime_CompileForOnStackReplacement
+                       |          |          |          v8::internal::Compiler::GetOptimizedCodeForOSR
+                       |          |          |          v8::internal::(anonymous namespace)::GetOptimizedCode
+                       |          |          |          |          
+                       |          |          |          |--60.06%--v8::internal::compiler::PipelineCompilationJob::ExecuteJobImpl
+                       |          |          |          |          v8::internal::compiler::PipelineImpl::OptimizeGraph
+                       |          |          |          |          |          
+                       |          |          |          |          |--33.39%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::StoreStoreEliminationPhase>
+                       |          |          |          |          |          v8::internal::compiler::StoreStoreEliminationPhase::Run
+                       |          |          |          |          |          v8::internal::compiler::StoreStoreElimination::Run
+                       |          |          |          |          |          v8::internal::compiler::(anonymous namespace)::RedundantStoreFinder::Visit
+                       |          |          |          |          |          
+                       |          |          |          |          |--33.31%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::LoadEliminationPhase>
+                       |          |          |          |          |          v8::internal::compiler::LoadEliminationPhase::Run
+                       |          |          |          |          |          v8::internal::compiler::GraphReducer::ReduceNode
+                       |          |          |          |          |          v8::internal::compiler::GraphReducer::ReduceTop
+                       |          |          |          |          |          v8::internal::compiler::GraphReducer::Reduce
+                       |          |          |          |          |          v8::internal::compiler::(anonymous namespace)::SourcePositionWrapper::Reduce
+                       |          |          |          |          |          v8::internal::compiler::Reducer::Reduce
+                       |          |          |          |          |          v8::internal::compiler::DeadCodeElimination::Reduce
+                       |          |          |          |          |          
+                       |          |          |          |           --33.30%--v8::internal::compiler::PipelineImpl::SelectInstructions
+                       |          |          |          |                     v8::internal::compiler::PipelineImpl::AllocateRegistersForTopTier
+                       |          |          |          |                     v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::MeetRegisterConstraintsPhase>
+                       |          |          |          |                     v8::internal::compiler::ConstraintBuilder::MeetRegisterConstraints
+                       |          |          |          |                     v8::internal::compiler::ConstraintBuilder::MeetRegisterConstraintsForLastInstructionInBlock
+                       |          |          |          |          
+                       |          |          |          |--19.99%--v8::internal::OSROptimizedCodeCache::AddOptimizedCode
+                       |          |          |          |          v8::internal::OSROptimizedCodeCache::GrowOSRCache
+                       |          |          |          |          v8::internal::Factory::CopyArrayAndGrow<v8::internal::WeakFixedArray>
+                       |          |          |          |          
+                       |          |          |           --19.95%--v8::internal::OptimizedCompilationJob::PrepareJob
+                       |          |          |          
+                       |          |           --16.60%--v8::Shell::CompileString<v8::Script>
+                       |          |                     v8::ScriptCompiler::Compile
+                       |          |                     v8::ScriptCompiler::CompileUnboundInternal
+                       |          |                     v8::internal::Compiler::GetSharedFunctionInfoForScript
+                       |          |                     v8::internal::(anonymous namespace)::CompileScriptOnMainThread
+                       |          |                     v8::internal::(anonymous namespace)::CompileToplevel
+                       |          |                     v8::internal::parsing::ParseProgram
+                       |          |                     v8::internal::Parser::ParseProgram
+                       |          |                     v8::internal::Parser::DeserializeScopeChain
+                       |          |                     v8::internal::DeclarationScope::DeclarationScope
+                       |          |                     v8::internal::VariableMap::Declare
+                       |          |          
+                       |          |--21.96%--v8::Shell::CreateEvaluationContext
+                       |          |          v8::Context::New
+                       |          |          v8::NewContext
+                       |          |          v8::internal::Bootstrapper::CreateEnvironment
+                       |          |          v8::internal::Genesis::Genesis
+                       |          |          |          
+                       |          |          |--50.11%--v8::internal::Genesis::CreateNewGlobals
+                       |          |          |          v8::internal::ApiNatives::CreateApiFunction
+                       |          |          |          v8::internal::Factory::NewMap
+                       |          |          |          v8::internal::Factory::InitializeMap
+                       |          |          |          
+                       |          |           --49.89%--v8::internal::Snapshot::NewContextFromSnapshot
+                       |          |                     v8::internal::SnapshotCompression::Decompress
+                       |          |                     zlib_internal::UncompressHelper
+                       |          |                     Cr_z_inflate
+                       |          |                     Cr_z_inflate_fast_chunk_
+                       |          |          
+                       |           --11.50%--v8::HandleScope::~HandleScope
+                       |                     v8::internal::HandleScope::DeleteExtensions
+                       |          
+                       |--39.89%--v8::Isolate::New
+                       |          v8::Isolate::Initialize
+                       |          v8::internal::Snapshot::Initialize
+                       |          |          
+                       |          |--73.99%--v8::internal::Isolate::InitWithSnapshot
+                       |          |          v8::internal::Isolate::Init
+                       |          |          |          
+                       |          |          |--60.37%--v8::internal::Builtins::EmitCodeCreateEvents
+                       |          |          |          v8::internal::CodeEventDispatcher::CodeCreateEvent
+                       |          |          |          |          
+                       |          |          |           --100.00%--v8::internal::PerfJitLogger::LogRecordedBuffer
+                       |          |          |                     v8::internal::PerfJitLogger::LogWriteUnwindingInfo
+                       |          |          |                     v8::internal::Code::OffHeapMetadataStart
+                       |          |          |                     |          
+                       |          |          |                     |--50.62%--v8::internal::Isolate::CurrentEmbeddedBlobData
+                       |          |          |                     |          
+                       |          |          |                      --49.38%--v8::internal::EmbeddedData::MetadataStartOfBuiltin
+                       |          |          |          
+                       |          |          |--19.91%--v8::internal::interpreter::Interpreter::Initialize
+                       |          |          |          std::__1::__function::__policy_invoker<void (v8::internal::interpreter::Bytecode, v8::internal::interpreter::OperandScale)>::__call_impl<std::__1::__function::__default_alloc_func<v8::internal::interpreter::Interpreter::Initialize()::$_0, void (v8::internal::interpreter::Bytecode, v8::internal::interpreter::OperandScale)> >
+                       |          |          |          v8::internal::Code::OffHeapInstructionStart
+                       |          |          |          v8::internal::(anonymous namespace)::EmbeddedDataWithMaybeRemappedEmbeddedBuiltins
+                       |          |          |          
+                       |          |           --19.72%--v8::internal::StartupDeserializer::DeserializeIntoIsolate
+                       |          |                     v8::internal::Heap::IterateRoots
+                       |          |                     v8::internal::Deserializer::VisitRootPointers
+                       |          |                     v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForRootSlots>
+                       |          |                     v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath
+                       |          |          
+                       |           --26.01%--v8::internal::SnapshotCompression::Decompress
+                       |                     zlib_internal::UncompressHelper
+                       |                     Cr_z_inflate
+                       |                     Cr_z_inflate_fast_chunk_
+                       |          
+                        --5.02%--v8::V8::Initialize
+                                  v8::internal::V8::Initialize
+                                  v8::base::CallOnceImpl
+                                  v8::internal::V8::InitializeOncePerProcessImpl
+                                  v8::internal::IsolateAllocator::InitializeOncePerProcess
+                                  operator new
+
+    74.05%    68.63%  [JIT] tid 3250    
+            |          
+            |--92.68%--__libc_start_main
+            |          v8::Shell::Main
+            |          v8::Shell::RunMain
+            |          v8::SourceGroup::Execute
+            |          v8::Shell::ExecuteString
+            |          v8::Script::Run
+            |          v8::internal::Execution::Call
+            |          v8::internal::(anonymous namespace)::Invoke
+            |          0x24b000009247
+            |          0x24b0000094bb
+            |          |          
+            |          |--16.28%--0x24b000184158
+            |          |          
+            |          |--14.90%--0x24b000184148
+            |          |          
+            |          |--14.77%--0x24b000184183
+            |          |          
+            |          |--9.47%--0x24b000184154
+            |          |          
+            |          |--8.11%--0x24b000184142
+            |          |          
+            |          |--8.08%--0x24b00018411d
+            |          |          
+            |          |--6.80%--0x24b000184110
+            |          |          
+            |          |--6.73%--0x24b000184138
+            |          |          
+            |          |--6.73%--0x24b00018413e
+            |          |          
+            |          |--5.43%--0x24b00018412a
+            |          |          
+            |           --2.69%--0x24b00018412e
+            |          
+             --7.32%--0x24b000009247
+                       0x24b0000094bb
+                       0x24b00000b461
+                       |          
+                       |--83.41%--0x24b00010ea45
+                       |          0x24b00000bc14
+                       |          0x24b000079e18
+                       |          v8::internal::Runtime_CompileForOnStackReplacement
+                       |          v8::internal::Compiler::GetOptimizedCodeForOSR
+                       |          v8::internal::(anonymous namespace)::GetOptimizedCode
+                       |          |          
+                       |          |--60.06%--v8::internal::compiler::PipelineCompilationJob::ExecuteJobImpl
+                       |          |          v8::internal::compiler::PipelineImpl::OptimizeGraph
+                       |          |          |          
+                       |          |          |--33.39%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::StoreStoreEliminationPhase>
+                       |          |          |          v8::internal::compiler::StoreStoreEliminationPhase::Run
+                       |          |          |          v8::internal::compiler::StoreStoreElimination::Run
+                       |          |          |          v8::internal::compiler::(anonymous namespace)::RedundantStoreFinder::Visit
+                       |          |          |          
+                       |          |          |--33.31%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::LoadEliminationPhase>
+                       |          |          |          v8::internal::compiler::LoadEliminationPhase::Run
+                       |          |          |          v8::internal::compiler::GraphReducer::ReduceNode
+                       |          |          |          v8::internal::compiler::GraphReducer::ReduceTop
+                       |          |          |          v8::internal::compiler::GraphReducer::Reduce
+                       |          |          |          v8::internal::compiler::(anonymous namespace)::SourcePositionWrapper::Reduce
+                       |          |          |          v8::internal::compiler::Reducer::Reduce
+                       |          |          |          v8::internal::compiler::DeadCodeElimination::Reduce
+                       |          |          |          
+                       |          |           --33.30%--v8::internal::compiler::PipelineImpl::SelectInstructions
+                       |          |                     v8::internal::compiler::PipelineImpl::AllocateRegistersForTopTier
+                       |          |                     v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::MeetRegisterConstraintsPhase>
+                       |          |                     v8::internal::compiler::ConstraintBuilder::MeetRegisterConstraints
+                       |          |                     v8::internal::compiler::ConstraintBuilder::MeetRegisterConstraintsForLastInstructionInBlock
+                       |          |          
+                       |          |--19.99%--v8::internal::OSROptimizedCodeCache::AddOptimizedCode
+                       |          |          v8::internal::OSROptimizedCodeCache::GrowOSRCache
+                       |          |          v8::internal::Factory::CopyArrayAndGrow<v8::internal::WeakFixedArray>
+                       |          |          
+                       |           --19.95%--v8::internal::OptimizedCompilationJob::PrepareJob
+                       |          
+                        --16.59%--0x24b00010eb13
+                                  0x24b000079e18
+                                  v8::internal::Runtime_BytecodeBudgetInterruptFromBytecode
+                                  v8::internal::RuntimeProfiler::MarkCandidatesForOptimizationFromBytecode
+                                  v8::internal::JavaScriptFrameIterator::Advance
+                                  v8::internal::StackFrameIterator::Advance
+                                  v8::internal::StackFrame::ComputeType
+                                  __pthread_mutex_lock
+
+    12.39%    12.39%  [kernel.kallsyms] 
+            |          
+            |--30.24%--0
+            |          |          
+            |          |--100.00%--read
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_read
+            |          |          ksys_read
+            |          |          vfs_read
+            |          |          |          
+            |          |          |--77.81%--new_sync_read
+            |          |          |          ext4_file_read_iter
+            |          |          |          generic_file_read_iter
+            |          |          |          generic_file_buffered_read
+            |          |          |          copy_page_to_iter
+            |          |          |          copy_user_generic_unrolled
+            |          |          |          |          
+            |          |          |           --100.00%--asm_exc_page_fault
+            |          |          |                     exc_page_fault
+            |          |          |                     do_user_addr_fault
+            |          |          |                     handle_mm_fault
+            |          |          |                     __handle_mm_fault
+            |          |          |                     do_anonymous_page
+            |          |          |                     |          
+            |          |          |                     |--85.73%--alloc_pages_vma
+            |          |          |                     |          __alloc_pages_nodemask
+            |          |          |                     |          get_page_from_freelist
+            |          |          |                     |          |          
+            |          |          |                     |          |--61.93%--clear_page_orig
+            |          |          |                     |          |          
+            |          |          |                     |           --38.07%--rmqueue
+            |          |          |                     |          
+            |          |          |                      --14.27%--lru_cache_add_active_or_unevictable
+            |          |          |                                lru_cache_add
+            |          |          |                                pagevec_lru_move_fn
+            |          |          |                                _raw_spin_lock_irqsave
+            |          |          |          
+            |          |           --22.19%--urandom_read
+            |          |                     urandom_read_nowarn.isra.0
+            |          |                     extract_crng
+            |          |                     _extract_crng
+            |          |                     chacha_block_generic
+            |          |                     chacha_permute
+            |           --0.00%--[...]
+            |          
+            |--19.91%--__libc_start_main
+            |          v8::Shell::Main
+            |          v8::Isolate::New
+            |          v8::Isolate::Initialize
+            |          v8::internal::Snapshot::Initialize
+            |          v8::internal::Isolate::InitWithSnapshot
+            |          v8::internal::Isolate::Init
+            |          |          
+            |          |--34.49%--__memmove_avx_unaligned_erms
+            |          |          asm_exc_page_fault
+            |          |          exc_page_fault
+            |          |          do_user_addr_fault
+            |          |          handle_mm_fault
+            |          |          __handle_mm_fault
+            |          |          do_anonymous_page
+            |          |          alloc_pages_vma
+            |          |          __alloc_pages_nodemask
+            |          |          get_page_from_freelist
+            |          |          clear_page_orig
+            |          |          
+            |          |--33.12%--v8::internal::ReadOnlyHeap::SetUp
+            |          |          v8::internal::ReadOnlyDeserializer::DeserializeIntoIsolate
+            |          |          v8::internal::Deserializer::VisitRootPointers
+            |          |          v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForRootSlots>
+            |          |          v8::internal::Deserializer::ReadObject
+            |          |          std::__1::vector<v8::internal::Handle<v8::internal::HeapObject>, std::__1::allocator<v8::internal::Handle<v8::internal::HeapObject> > >::push_back
+            |          |          asm_exc_page_fault
+            |          |          
+            |           --32.40%--v8::internal::Heap::SetUp
+            |                     v8::base::CallOnceImpl
+            |                     v8::internal::CodeRange::InitializeProcessWideCodeRangeOnce
+            |                     v8::internal::CodeRange::InitReservation
+            |                     v8::internal::VirtualMemoryCage::InitReservation
+            |                     v8::internal::AllocatePages
+            |                     v8::base::BoundedPageAllocator::AllocatePages
+            |                     __madvise
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_madvise
+            |                     do_madvise
+            |                     do_madvise.part.0
+            |                     walk_page_range
+            |          
+            |--7.54%--pthread_cond_broadcast@@GLIBC_2.3.2
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wake
+            |          wake_up_q
+            |          try_to_wake_up
+            |          __lock_text_start
+            |          asm_common_interrupt
+            |          common_interrupt
+            |          asm_call_sysvec_on_stack
+            |          handle_fasteoi_irq
+            |          handle_irq_event
+            |          handle_irq_event_percpu
+            |          __handle_irq_event_percpu
+            |          mptscsih_io_done
+            |          
+            |--7.18%--__munmap
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_munmap
+            |          __vm_munmap
+            |          __do_munmap
+            |          unmap_region
+            |          tlb_finish_mmu
+            |          tlb_flush_mmu
+            |          free_pages_and_swap_cache
+            |          release_pages
+            |          free_unref_page_commit
+            |          
+            |--7.16%--0x72656c646e614865
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_end
+            |          generic_write_end
+            |          __mark_inode_dirty
+            |          ext4_dirty_inode
+            |          __ext4_mark_inode_dirty
+            |          ext4_mark_iloc_dirty
+            |          ext4_do_update_inode
+            |          ext4_inode_csum_set
+            |          ext4_inode_csum.isra.0
+            |          crypto_shash_update
+            |          crc32c_pcl_intel_update
+            |          
+            |--7.08%--0x48505756e5894855
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_begin
+            |          grab_cache_page_write_begin
+            |          pagecache_get_page
+            |          __page_cache_alloc
+            |          alloc_pages_current
+            |          __alloc_pages_nodemask
+            |          get_page_from_freelist
+            |          clear_page_orig
+            |          
+            |--7.05%--0xff689d8948ffffff
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_begin
+            |          ext4_block_write_begin
+            |          create_empty_buffers
+            |          alloc_page_buffers
+            |          alloc_buffer_head
+            |          kmem_cache_alloc
+            |          memcg_kmem_get_cache
+            |          
+            |--6.96%--0x11009d39451a7400
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_end
+            |          generic_write_end
+            |          __mark_inode_dirty
+            |          ext4_dirty_inode
+            |          __ext4_mark_inode_dirty
+            |          ext4_mark_iloc_dirty
+            |          ext4_do_update_inode
+            |          ext4_inode_csum_set
+            |          
+            |--6.89%--entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_exit_group
+            |          do_group_exit
+            |          do_exit
+            |          mmput
+            |          exit_mmap
+            |          unmap_vmas
+             --0.00%--[...]
+
+     8.83%     0.00%  [unknown]         
+            |          
+            |--50.47%--0
+            |          |          
+            |          |--84.04%--read
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_read
+            |          |          ksys_read
+            |          |          vfs_read
+            |          |          |          
+            |          |          |--77.81%--new_sync_read
+            |          |          |          ext4_file_read_iter
+            |          |          |          generic_file_read_iter
+            |          |          |          generic_file_buffered_read
+            |          |          |          copy_page_to_iter
+            |          |          |          copy_user_generic_unrolled
+            |          |          |          |          
+            |          |          |           --100.00%--asm_exc_page_fault
+            |          |          |                     exc_page_fault
+            |          |          |                     do_user_addr_fault
+            |          |          |                     handle_mm_fault
+            |          |          |                     __handle_mm_fault
+            |          |          |                     do_anonymous_page
+            |          |          |                     |          
+            |          |          |                     |--85.73%--alloc_pages_vma
+            |          |          |                     |          __alloc_pages_nodemask
+            |          |          |                     |          get_page_from_freelist
+            |          |          |                     |          |          
+            |          |          |                     |          |--61.93%--clear_page_orig
+            |          |          |                     |          |          
+            |          |          |                     |           --38.07%--rmqueue
+            |          |          |                     |          
+            |          |          |                      --14.27%--lru_cache_add_active_or_unevictable
+            |          |          |                                lru_cache_add
+            |          |          |                                pagevec_lru_move_fn
+            |          |          |                                _raw_spin_lock_irqsave
+            |          |          |          
+            |          |           --22.19%--urandom_read
+            |          |                     urandom_read_nowarn.isra.0
+            |          |                     extract_crng
+            |          |                     _extract_crng
+            |          |                     chacha_block_generic
+            |          |                     chacha_permute
+            |          |          
+            |          |--15.96%--0x7f00b1ebc9d0
+            |           --0.00%--[...]
+            |          
+            |--10.04%--0x72656c646e614865
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_end
+            |          generic_write_end
+            |          __mark_inode_dirty
+            |          ext4_dirty_inode
+            |          __ext4_mark_inode_dirty
+            |          ext4_mark_iloc_dirty
+            |          ext4_do_update_inode
+            |          ext4_inode_csum_set
+            |          ext4_inode_csum.isra.0
+            |          crypto_shash_update
+            |          crc32c_pcl_intel_update
+            |          
+            |--9.93%--0x48505756e5894855
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_begin
+            |          grab_cache_page_write_begin
+            |          pagecache_get_page
+            |          __page_cache_alloc
+            |          alloc_pages_current
+            |          __alloc_pages_nodemask
+            |          get_page_from_freelist
+            |          clear_page_orig
+            |          
+            |--9.91%--0x559800d2ac40
+            |          __memmove_avx_unaligned_erms
+            |          
+            |--9.89%--0xff689d8948ffffff
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_begin
+            |          ext4_block_write_begin
+            |          create_empty_buffers
+            |          alloc_page_buffers
+            |          alloc_buffer_head
+            |          kmem_cache_alloc
+            |          memcg_kmem_get_cache
+            |          
+            |--9.76%--0x11009d39451a7400
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_end
+            |          generic_write_end
+            |          __mark_inode_dirty
+            |          ext4_dirty_inode
+            |          __ext4_mark_inode_dirty
+            |          ext4_mark_iloc_dirty
+            |          ext4_do_update_inode
+            |          ext4_inode_csum_set
+             --0.00%--[...]
+
+     1.83%     0.90%  libpthread-2.31.so
+            |          
+            |--50.94%--pthread_cond_broadcast@@GLIBC_2.3.2
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_futex
+            |          do_futex
+            |          futex_wake
+            |          wake_up_q
+            |          try_to_wake_up
+            |          __lock_text_start
+            |          asm_common_interrupt
+            |          common_interrupt
+            |          asm_call_sysvec_on_stack
+            |          handle_fasteoi_irq
+            |          handle_irq_event
+            |          handle_irq_event_percpu
+            |          __handle_irq_event_percpu
+            |          mptscsih_io_done
+            |          
+            |--49.06%--__libc_start_main
+            |          v8::Shell::Main
+            |          v8::Shell::RunMain
+            |          v8::SourceGroup::Execute
+            |          v8::Shell::ExecuteString
+            |          v8::Script::Run
+            |          v8::internal::Execution::Call
+            |          v8::internal::(anonymous namespace)::Invoke
+            |          0x24b000009247
+            |          0x24b0000094bb
+            |          0x24b00000b461
+            |          0x24b00010eb13
+            |          0x24b000079e18
+            |          v8::internal::Runtime_BytecodeBudgetInterruptFromBytecode
+            |          v8::internal::RuntimeProfiler::MarkCandidatesForOptimizationFromBytecode
+            |          v8::internal::JavaScriptFrameIterator::Advance
+            |          v8::internal::StackFrameIterator::Advance
+            |          v8::internal::StackFrame::ComputeType
+            |          __pthread_mutex_lock
+             --0.00%--[...]
+
+     0.71%     0.71%  libgcc_s.so.1     
+            |
+            ---0
+               0x7f00b1ebc9d0
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
