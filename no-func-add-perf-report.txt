@@ -1,0 +1,1084 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 113  of event 'cycles'
+# Event count (approx.): 111412798
+#
+# Children      Self  Shared Object     
+# ........  ........  ..................
+#
+    96.14%     4.79%  libc-2.31.so      
+            |          
+            |--76.56%--__libc_start_main
+            |          v8::Shell::Main
+            |          |          
+            |          |--87.15%--v8::Shell::RunMain
+            |          |          |          
+            |          |          |--95.43%--v8::SourceGroup::Execute
+            |          |          |          v8::Shell::ExecuteString
+            |          |          |          v8::Script::Run
+            |          |          |          v8::internal::Execution::Call
+            |          |          |          v8::internal::(anonymous namespace)::Invoke
+            |          |          |          0x293500009247
+            |          |          |          0x2935000094bb
+            |          |          |          |          
+            |          |          |          |--26.81%--0x293500184133
+            |          |          |          |          
+            |          |          |          |--17.72%--0x29350018411a
+            |          |          |          |          
+            |          |          |          |--15.94%--0x293500184143
+            |          |          |          |          
+            |          |          |          |--15.93%--0x29350018416d
+            |          |          |          |          
+            |          |          |          |--14.13%--0x29350018412d
+            |          |          |          |          
+            |          |          |          |--6.26%--0x29350000b461
+            |          |          |          |          0x29350010ea45
+            |          |          |          |          0x29350000bc14
+            |          |          |          |          0x293500079e18
+            |          |          |          |          v8::internal::Runtime_CompileForOnStackReplacement
+            |          |          |          |          v8::internal::Compiler::GetOptimizedCodeForOSR
+            |          |          |          |          v8::internal::(anonymous namespace)::GetOptimizedCode
+            |          |          |          |          |          
+            |          |          |          |          |--74.64%--v8::internal::compiler::PipelineCompilationJob::ExecuteJobImpl
+            |          |          |          |          |          v8::internal::compiler::PipelineImpl::OptimizeGraph
+            |          |          |          |          |          |          
+            |          |          |          |          |          |--33.44%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::GenericLoweringPhase>
+            |          |          |          |          |          |          v8::internal::compiler::GenericLoweringPhase::Run
+            |          |          |          |          |          |          v8::internal::compiler::GraphReducer::ReduceNode
+            |          |          |          |          |          |          v8::internal::compiler::GraphReducer::ReduceTop
+            |          |          |          |          |          |          v8::internal::compiler::GraphReducer::Reduce
+            |          |          |          |          |          |          v8::internal::compiler::(anonymous namespace)::SourcePositionWrapper::Reduce
+            |          |          |          |          |          |          v8::internal::compiler::Reducer::Reduce
+            |          |          |          |          |          |          v8::internal::compiler::JSGenericLowering::Reduce
+            |          |          |          |          |          |          v8::internal::compiler::JSGenericLowering::LowerJSLoadGlobal
+            |          |          |          |          |          |          v8::internal::compiler::Linkage::GetStubCallDescriptor
+            |          |          |          |          |          |          
+            |          |          |          |          |          |--33.37%--v8::internal::compiler::PipelineImpl::SelectInstructions
+            |          |          |          |          |          |          v8::internal::compiler::PipelineImpl::AllocateRegistersForTopTier
+            |          |          |          |          |          |          v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::OptimizeMovesPhase>
+            |          |          |          |          |          |          v8::internal::compiler::MoveOptimizer::Run
+            |          |          |          |          |          |          v8::internal::compiler::MoveOptimizer::CompressGaps
+            |          |          |          |          |          |          
+            |          |          |          |          |           --33.19%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::ComputeSchedulePhase>
+            |          |          |          |          |                     v8::internal::compiler::Scheduler::ComputeSchedule
+            |          |          |          |          |                     v8::internal::compiler::Scheduler::PrepareUses
+            |          |          |          |          |                     v8::internal::compiler::PrepareUsesVisitor::Run
+            |          |          |          |          |                     v8::internal::compiler::PrepareUsesVisitor::VisitInputs
+            |          |          |          |          |                     v8::internal::compiler::Scheduler::IncrementUnscheduledUseCount
+            |          |          |          |          |          
+            |          |          |          |           --25.36%--v8::internal::(anonymous namespace)::PrepareJobWithHandleScope
+            |          |          |          |                     v8::internal::OptimizedCompilationJob::PrepareJob
+            |          |          |          |                     v8::internal::compiler::PipelineCompilationJob::PrepareJobImpl
+            |          |          |          |                     v8::internal::compiler::PipelineImpl::CreateGraph
+            |          |          |          |                     v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::InliningPhase>
+            |          |          |          |                     v8::internal::compiler::InliningPhase::Run
+            |          |          |          |                     v8::internal::compiler::GraphReducer::ReduceNode
+            |          |          |          |                     v8::internal::compiler::GraphReducer::ReduceTop
+            |          |          |          |                     v8::internal::compiler::GraphReducer::Reduce
+            |          |          |          |          
+            |          |          |          |--1.63%--0x29350018413f
+            |          |          |          |          
+            |          |          |           --1.59%--0x2935001032a9
+            |          |          |          
+            |          |           --4.57%--v8::Shell::CreateEvaluationContext
+            |          |                     v8::Context::New
+            |          |                     v8::NewContext
+            |          |                     v8::internal::Bootstrapper::CreateEnvironment
+            |          |                     |          
+            |          |                     |--66.59%--v8::internal::Genesis::Genesis
+            |          |                     |          v8::internal::Snapshot::NewContextFromSnapshot
+            |          |                     |          |          
+            |          |                     |          |--50.01%--v8::internal::ContextDeserializer::DeserializeContext
+            |          |                     |          |          v8::internal::ContextDeserializer::Deserialize
+            |          |                     |          |          v8::internal::Deserializer::ReadObject
+            |          |                     |          |          v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForHandle>
+            |          |                     |          |          v8::internal::Deserializer::ReadObject
+            |          |                     |          |          v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForHeapObject>
+            |          |                     |          |          v8::internal::Deserializer::ReadObject
+            |          |                     |          |          asm_exc_page_fault
+            |          |                     |          |          exc_page_fault
+            |          |                     |          |          do_user_addr_fault
+            |          |                     |          |          handle_mm_fault
+            |          |                     |          |          __handle_mm_fault
+            |          |                     |          |          do_anonymous_page
+            |          |                     |          |          alloc_pages_vma
+            |          |                     |          |          __alloc_pages_nodemask
+            |          |                     |          |          get_page_from_freelist
+            |          |                     |          |          clear_page_orig
+            |          |                     |          |          
+            |          |                     |           --49.99%--v8::internal::SnapshotCompression::Decompress
+            |          |                     |                     zlib_internal::UncompressHelper
+            |          |                     |                     Cr_z_inflate
+            |          |                     |                     Cr_z_inflate_table
+            |          |                     |          
+            |          |                      --33.41%--v8::internal::Genesis::InstallSpecialObjects
+            |          |                                v8::internal::WasmJs::Install
+            |          |                                v8::internal::InstallFunc
+            |          |                                v8::internal::JSObject::AddProperty
+            |          |                                v8::internal::Object::AddDataProperty
+            |          |                                v8::internal::LookupIterator::PrepareTransitionToDataProperty
+            |          |                                v8::internal::Map::TransitionToDataProperty
+            |          |                                v8::internal::Map::CopyWithField
+            |          |                                v8::internal::Map::CopyAddDescriptor
+            |          |                                v8::internal::Map::CopyReplaceDescriptors
+            |          |          
+            |          |--11.50%--v8::Isolate::New
+            |          |          v8::Isolate::Initialize
+            |          |          v8::internal::Snapshot::Initialize
+            |          |          |          
+            |          |          |--78.51%--v8::internal::Isolate::InitWithSnapshot
+            |          |          |          v8::internal::Isolate::Init
+            |          |          |          |          
+            |          |          |          |--42.54%--__memmove_avx_unaligned_erms
+            |          |          |          |          asm_exc_page_fault
+            |          |          |          |          |          
+            |          |          |          |           --100.00%--exc_page_fault
+            |          |          |          |                     do_user_addr_fault
+            |          |          |          |                     handle_mm_fault
+            |          |          |          |                     __handle_mm_fault
+            |          |          |          |                     do_anonymous_page
+            |          |          |          |                     alloc_pages_vma
+            |          |          |          |                     __alloc_pages_nodemask
+            |          |          |          |                     get_page_from_freelist
+            |          |          |          |                     clear_page_orig
+            |          |          |          |          
+            |          |          |          |--29.30%--v8::internal::Builtins::EmitCodeCreateEvents
+            |          |          |          |          v8::internal::CodeEventDispatcher::CodeCreateEvent
+            |          |          |          |          |          
+            |          |          |          |          |--50.12%--v8::internal::PerfJitLogger::LogRecordedBuffer
+            |          |          |          |          |          _IO_fwrite
+            |          |          |          |          |          
+            |          |          |          |           --49.88%--__getpid
+            |          |          |          |                     entry_SYSCALL_64
+            |          |          |          |          
+            |          |          |          |--14.21%--v8::internal::StartupDeserializer::DeserializeIntoIsolate
+            |          |          |          |          v8::internal::SerializerDeserializer::Iterate
+            |          |          |          |          v8::internal::Deserializer::VisitRootPointers
+            |          |          |          |          v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForRootSlots>
+            |          |          |          |          v8::internal::Deserializer::ReadObject
+            |          |          |          |          v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForHeapObject>
+            |          |          |          |          v8::internal::Deserializer::ReadObject
+            |          |          |          |          asm_exc_page_fault
+            |          |          |          |          exc_page_fault
+            |          |          |          |          do_user_addr_fault
+            |          |          |          |          handle_mm_fault
+            |          |          |          |          __handle_mm_fault
+            |          |          |          |          do_anonymous_page
+            |          |          |          |          lru_cache_add_active_or_unevictable
+            |          |          |          |          lru_cache_add
+            |          |          |          |          
+            |          |          |           --13.95%--v8::internal::ReadOnlyHeap::SetUp
+            |          |          |                     v8::internal::ReadOnlyDeserializer::DeserializeIntoIsolate
+            |          |          |                     v8::internal::Deserializer::VisitRootPointers
+            |          |          |                     v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForRootSlots>
+            |          |          |                     v8::internal::Deserializer::ReadObject
+            |          |          |                     v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath
+            |          |          |                     v8::internal::Heap::AllocateRawWithLightRetrySlowPath
+            |          |          |                     v8::internal::Heap::AllocateRaw
+            |          |          |          
+            |          |           --21.49%--v8::internal::SnapshotCompression::Decompress
+            |          |                     zlib_internal::UncompressHelper
+            |          |                     Cr_z_inflate
+            |          |                     |          
+            |          |                      --100.00%--Cr_z_inflate_fast_chunk_
+            |          |          
+            |           --1.36%--v8::Shell::OnExit
+            |                     v8::internal::Isolate::Delete
+            |                     v8::internal::Isolate::~Isolate
+            |                     v8::internal::SingleCopyReadOnlyArtifacts::~SingleCopyReadOnlyArtifacts
+            |                     v8::base::BoundedPageAllocator::FreePages
+            |                     __mprotect
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_mprotect
+            |                     do_mprotect_pkey
+            |                     vma_merge
+            |          
+            |--13.63%--read
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_read
+            |          ksys_read
+            |          vfs_read
+            |          |          
+            |          |--93.06%--new_sync_read
+            |          |          ext4_file_read_iter
+            |          |          generic_file_read_iter
+            |          |          generic_file_buffered_read
+            |          |          copy_page_to_iter
+            |          |          |          
+            |          |          |--92.82%--copy_user_generic_unrolled
+            |          |          |          |          
+            |          |          |           --100.00%--asm_exc_page_fault
+            |          |          |                     exc_page_fault
+            |          |          |                     do_user_addr_fault
+            |          |          |                     |          
+            |          |          |                     |--88.38%--handle_mm_fault
+            |          |          |                     |          __handle_mm_fault
+            |          |          |                     |          do_anonymous_page
+            |          |          |                     |          |          
+            |          |          |                     |          |--75.31%--alloc_pages_vma
+            |          |          |                     |          |          __alloc_pages_nodemask
+            |          |          |                     |          |          |          
+            |          |          |                     |          |           --100.00%--get_page_from_freelist
+            |          |          |                     |          |                     clear_page_orig
+            |          |          |                     |          |          
+            |          |          |                     |          |--12.46%--mem_cgroup_charge
+            |          |          |                     |          |          mem_cgroup_charge_statistics.isra.0
+            |          |          |                     |          |          __count_memcg_events
+            |          |          |                     |          |          
+            |          |          |                     |           --12.23%--lru_cache_add_active_or_unevictable
+            |          |          |                     |          
+            |          |          |                      --11.62%--_cond_resched
+            |          |          |          
+            |          |           --7.18%--asm_exc_page_fault
+            |          |          
+            |           --6.94%--urandom_read
+            |                     urandom_read_nowarn.isra.0
+            |                     extract_crng
+            |                     _extract_crng
+            |          
+            |--3.99%--__GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          |          
+            |          |--50.30%--iov_iter_copy_from_user_atomic
+            |          |          copy_user_generic_unrolled
+            |          |          
+            |           --49.70%--ext4_da_write_begin
+            |                     |          
+            |                     |--50.18%--grab_cache_page_write_begin
+            |                     |          pagecache_get_page
+            |                     |          __page_cache_alloc
+            |                     |          alloc_pages_current
+            |                     |          __alloc_pages_nodemask
+            |                     |          get_page_from_freelist
+            |                     |          clear_page_orig
+            |                     |          
+            |                      --49.82%--__ext4_journal_start_sb
+            |                                jbd2__journal_start
+            |                                _raw_read_lock
+            |          
+            |--2.01%--0x56118d8e7c40
+            |          __memmove_avx_unaligned_erms
+            |          
+            |--1.00%--_IO_fwrite
+            |          
+            |--0.99%--__munmap
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_munmap
+            |          __vm_munmap
+            |          __do_munmap
+            |          unmap_region
+            |          tlb_finish_mmu
+            |          tlb_flush_mmu
+            |          free_pages_and_swap_cache
+            |          release_pages
+            |          free_unref_page_list
+            |          free_unref_page_commit
+            |          free_pcppages_bulk
+            |          
+            |--0.96%--malloc
+            |          
+            |--0.85%--sysmalloc
+            |          asm_exc_page_fault
+            |          exc_page_fault
+            |          do_user_addr_fault
+            |          handle_mm_fault
+            |          __handle_mm_fault
+            |          do_anonymous_page
+            |          __pte_alloc
+            |          pte_alloc_one
+            |          alloc_pages_current
+            |          __alloc_pages_nodemask
+            |          __memcg_kmem_charge_page
+            |          __memcg_kmem_charge
+             --0.00%--[...]
+
+    73.61%     8.53%  d8                
+            |          
+            |--88.41%--v8::Shell::Main
+            |          |          
+            |          |--89.68%--v8::Shell::RunMain
+            |          |          |          
+            |          |          |--98.33%--v8::SourceGroup::Execute
+            |          |          |          v8::Shell::ExecuteString
+            |          |          |          v8::Script::Run
+            |          |          |          v8::internal::Execution::Call
+            |          |          |          v8::internal::(anonymous namespace)::Invoke
+            |          |          |          0x293500009247
+            |          |          |          0x2935000094bb
+            |          |          |          |          
+            |          |          |          |--28.60%--0x293500184133
+            |          |          |          |          
+            |          |          |          |--18.90%--0x29350018411a
+            |          |          |          |          
+            |          |          |          |--17.00%--0x293500184143
+            |          |          |          |          
+            |          |          |          |--16.99%--0x29350018416d
+            |          |          |          |          
+            |          |          |          |--15.07%--0x29350018412d
+            |          |          |          |          
+            |          |          |          |--1.74%--0x29350018413f
+            |          |          |          |          
+            |          |          |           --1.70%--0x2935001032a9
+            |          |          |          
+            |          |           --1.67%--v8::Shell::CreateEvaluationContext
+            |          |                     v8::Context::New
+            |          |                     v8::NewContext
+            |          |                     v8::internal::Bootstrapper::CreateEnvironment
+            |          |                     v8::internal::Genesis::Genesis
+            |          |                     v8::internal::Snapshot::NewContextFromSnapshot
+            |          |                     v8::internal::ContextDeserializer::DeserializeContext
+            |          |                     v8::internal::ContextDeserializer::Deserialize
+            |          |                     v8::internal::Deserializer::ReadObject
+            |          |                     v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForHandle>
+            |          |                     v8::internal::Deserializer::ReadObject
+            |          |                     v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForHeapObject>
+            |          |                     v8::internal::Deserializer::ReadObject
+            |          |                     asm_exc_page_fault
+            |          |                     exc_page_fault
+            |          |                     do_user_addr_fault
+            |          |                     handle_mm_fault
+            |          |                     __handle_mm_fault
+            |          |                     do_anonymous_page
+            |          |                     alloc_pages_vma
+            |          |                     __alloc_pages_nodemask
+            |          |                     get_page_from_freelist
+            |          |                     clear_page_orig
+            |          |          
+            |          |--8.78%--v8::Isolate::New
+            |          |          v8::Isolate::Initialize
+            |          |          v8::internal::Snapshot::Initialize
+            |          |          v8::internal::Isolate::InitWithSnapshot
+            |          |          v8::internal::Isolate::Init
+            |          |          |          
+            |          |          |--49.44%--__memmove_avx_unaligned_erms
+            |          |          |          asm_exc_page_fault
+            |          |          |          |          
+            |          |          |           --100.00%--exc_page_fault
+            |          |          |                     do_user_addr_fault
+            |          |          |                     handle_mm_fault
+            |          |          |                     __handle_mm_fault
+            |          |          |                     do_anonymous_page
+            |          |          |                     alloc_pages_vma
+            |          |          |                     __alloc_pages_nodemask
+            |          |          |                     get_page_from_freelist
+            |          |          |                     clear_page_orig
+            |          |          |          
+            |          |          |--34.05%--v8::internal::Builtins::EmitCodeCreateEvents
+            |          |          |          v8::internal::CodeEventDispatcher::CodeCreateEvent
+            |          |          |          |          
+            |          |          |          |--50.12%--v8::internal::PerfJitLogger::LogRecordedBuffer
+            |          |          |          |          _IO_fwrite
+            |          |          |          |          
+            |          |          |           --49.88%--__getpid
+            |          |          |                     entry_SYSCALL_64
+            |          |          |          
+            |          |           --16.51%--v8::internal::StartupDeserializer::DeserializeIntoIsolate
+            |          |                     v8::internal::SerializerDeserializer::Iterate
+            |          |                     v8::internal::Deserializer::VisitRootPointers
+            |          |                     v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForRootSlots>
+            |          |                     v8::internal::Deserializer::ReadObject
+            |          |                     v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForHeapObject>
+            |          |                     v8::internal::Deserializer::ReadObject
+            |          |                     asm_exc_page_fault
+            |          |                     exc_page_fault
+            |          |                     do_user_addr_fault
+            |          |                     handle_mm_fault
+            |          |                     __handle_mm_fault
+            |          |                     do_anonymous_page
+            |          |                     lru_cache_add_active_or_unevictable
+            |          |                     lru_cache_add
+            |          |          
+            |           --1.53%--v8::Shell::OnExit
+            |                     v8::internal::Isolate::Delete
+            |                     v8::internal::Isolate::~Isolate
+            |                     v8::internal::SingleCopyReadOnlyArtifacts::~SingleCopyReadOnlyArtifacts
+            |                     v8::base::BoundedPageAllocator::FreePages
+            |                     __mprotect
+            |                     entry_SYSCALL_64_after_hwframe
+            |                     do_syscall_64
+            |                     __x64_sys_mprotect
+            |                     do_mprotect_pkey
+            |                     vma_merge
+            |          
+             --11.59%--__libc_start_main
+                       v8::Shell::Main
+                       |          
+                       |--67.83%--v8::Shell::RunMain
+                       |          |          
+                       |          |--66.22%--v8::SourceGroup::Execute
+                       |          |          v8::Shell::ExecuteString
+                       |          |          v8::Script::Run
+                       |          |          v8::internal::Execution::Call
+                       |          |          v8::internal::(anonymous namespace)::Invoke
+                       |          |          0x293500009247
+                       |          |          0x2935000094bb
+                       |          |          0x29350000b461
+                       |          |          0x29350010ea45
+                       |          |          0x29350000bc14
+                       |          |          0x293500079e18
+                       |          |          v8::internal::Runtime_CompileForOnStackReplacement
+                       |          |          v8::internal::Compiler::GetOptimizedCodeForOSR
+                       |          |          v8::internal::(anonymous namespace)::GetOptimizedCode
+                       |          |          |          
+                       |          |          |--74.64%--v8::internal::compiler::PipelineCompilationJob::ExecuteJobImpl
+                       |          |          |          v8::internal::compiler::PipelineImpl::OptimizeGraph
+                       |          |          |          |          
+                       |          |          |          |--33.44%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::GenericLoweringPhase>
+                       |          |          |          |          v8::internal::compiler::GenericLoweringPhase::Run
+                       |          |          |          |          v8::internal::compiler::GraphReducer::ReduceNode
+                       |          |          |          |          v8::internal::compiler::GraphReducer::ReduceTop
+                       |          |          |          |          v8::internal::compiler::GraphReducer::Reduce
+                       |          |          |          |          v8::internal::compiler::(anonymous namespace)::SourcePositionWrapper::Reduce
+                       |          |          |          |          v8::internal::compiler::Reducer::Reduce
+                       |          |          |          |          v8::internal::compiler::JSGenericLowering::Reduce
+                       |          |          |          |          v8::internal::compiler::JSGenericLowering::LowerJSLoadGlobal
+                       |          |          |          |          v8::internal::compiler::Linkage::GetStubCallDescriptor
+                       |          |          |          |          
+                       |          |          |          |--33.37%--v8::internal::compiler::PipelineImpl::SelectInstructions
+                       |          |          |          |          v8::internal::compiler::PipelineImpl::AllocateRegistersForTopTier
+                       |          |          |          |          v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::OptimizeMovesPhase>
+                       |          |          |          |          v8::internal::compiler::MoveOptimizer::Run
+                       |          |          |          |          v8::internal::compiler::MoveOptimizer::CompressGaps
+                       |          |          |          |          
+                       |          |          |           --33.19%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::ComputeSchedulePhase>
+                       |          |          |                     v8::internal::compiler::Scheduler::ComputeSchedule
+                       |          |          |                     v8::internal::compiler::Scheduler::PrepareUses
+                       |          |          |                     v8::internal::compiler::PrepareUsesVisitor::Run
+                       |          |          |                     v8::internal::compiler::PrepareUsesVisitor::VisitInputs
+                       |          |          |                     v8::internal::compiler::Scheduler::IncrementUnscheduledUseCount
+                       |          |          |          
+                       |          |           --25.36%--v8::internal::(anonymous namespace)::PrepareJobWithHandleScope
+                       |          |                     v8::internal::OptimizedCompilationJob::PrepareJob
+                       |          |                     v8::internal::compiler::PipelineCompilationJob::PrepareJobImpl
+                       |          |                     v8::internal::compiler::PipelineImpl::CreateGraph
+                       |          |                     v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::InliningPhase>
+                       |          |                     v8::internal::compiler::InliningPhase::Run
+                       |          |                     v8::internal::compiler::GraphReducer::ReduceNode
+                       |          |                     v8::internal::compiler::GraphReducer::ReduceTop
+                       |          |                     v8::internal::compiler::GraphReducer::Reduce
+                       |          |          
+                       |           --33.78%--v8::Shell::CreateEvaluationContext
+                       |                     v8::Context::New
+                       |                     v8::NewContext
+                       |                     v8::internal::Bootstrapper::CreateEnvironment
+                       |                     |          
+                       |                     |--50.09%--v8::internal::Genesis::InstallSpecialObjects
+                       |                     |          v8::internal::WasmJs::Install
+                       |                     |          v8::internal::InstallFunc
+                       |                     |          v8::internal::JSObject::AddProperty
+                       |                     |          v8::internal::Object::AddDataProperty
+                       |                     |          v8::internal::LookupIterator::PrepareTransitionToDataProperty
+                       |                     |          v8::internal::Map::TransitionToDataProperty
+                       |                     |          v8::internal::Map::CopyWithField
+                       |                     |          v8::internal::Map::CopyAddDescriptor
+                       |                     |          v8::internal::Map::CopyReplaceDescriptors
+                       |                     |          
+                       |                      --49.91%--v8::internal::Genesis::Genesis
+                       |                                v8::internal::Snapshot::NewContextFromSnapshot
+                       |                                v8::internal::SnapshotCompression::Decompress
+                       |                                zlib_internal::UncompressHelper
+                       |                                Cr_z_inflate
+                       |                                Cr_z_inflate_table
+                       |          
+                        --32.17%--v8::Isolate::New
+                                  v8::Isolate::Initialize
+                                  v8::internal::Snapshot::Initialize
+                                  |          
+                                  |--66.24%--v8::internal::SnapshotCompression::Decompress
+                                  |          zlib_internal::UncompressHelper
+                                  |          Cr_z_inflate
+                                  |          |          
+                                  |           --100.00%--Cr_z_inflate_fast_chunk_
+                                  |          
+                                   --33.76%--v8::internal::Isolate::InitWithSnapshot
+                                             v8::internal::Isolate::Init
+                                             v8::internal::ReadOnlyHeap::SetUp
+                                             v8::internal::ReadOnlyDeserializer::DeserializeIntoIsolate
+                                             v8::internal::Deserializer::VisitRootPointers
+                                             v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForRootSlots>
+                                             v8::internal::Deserializer::ReadObject
+                                             v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath
+                                             v8::internal::Heap::AllocateRawWithLightRetrySlowPath
+                                             v8::internal::Heap::AllocateRaw
+
+    61.22%    57.38%  [JIT] tid 2590    
+            |          
+            |--93.74%--__libc_start_main
+            |          v8::Shell::Main
+            |          v8::Shell::RunMain
+            |          v8::SourceGroup::Execute
+            |          v8::Shell::ExecuteString
+            |          v8::Script::Run
+            |          v8::internal::Execution::Call
+            |          v8::internal::(anonymous namespace)::Invoke
+            |          0x293500009247
+            |          0x2935000094bb
+            |          |          
+            |          |--28.60%--0x293500184133
+            |          |          
+            |          |--18.90%--0x29350018411a
+            |          |          
+            |          |--17.00%--0x293500184143
+            |          |          
+            |          |--16.99%--0x29350018416d
+            |          |          
+            |          |--15.07%--0x29350018412d
+            |          |          
+            |          |--1.74%--0x29350018413f
+            |          |          
+            |           --1.70%--0x2935001032a9
+            |          
+             --6.26%--0x293500009247
+                       0x2935000094bb
+                       0x29350000b461
+                       0x29350010ea45
+                       0x29350000bc14
+                       0x293500079e18
+                       v8::internal::Runtime_CompileForOnStackReplacement
+                       v8::internal::Compiler::GetOptimizedCodeForOSR
+                       v8::internal::(anonymous namespace)::GetOptimizedCode
+                       |          
+                       |--74.64%--v8::internal::compiler::PipelineCompilationJob::ExecuteJobImpl
+                       |          v8::internal::compiler::PipelineImpl::OptimizeGraph
+                       |          |          
+                       |          |--33.44%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::GenericLoweringPhase>
+                       |          |          v8::internal::compiler::GenericLoweringPhase::Run
+                       |          |          v8::internal::compiler::GraphReducer::ReduceNode
+                       |          |          v8::internal::compiler::GraphReducer::ReduceTop
+                       |          |          v8::internal::compiler::GraphReducer::Reduce
+                       |          |          v8::internal::compiler::(anonymous namespace)::SourcePositionWrapper::Reduce
+                       |          |          v8::internal::compiler::Reducer::Reduce
+                       |          |          v8::internal::compiler::JSGenericLowering::Reduce
+                       |          |          v8::internal::compiler::JSGenericLowering::LowerJSLoadGlobal
+                       |          |          v8::internal::compiler::Linkage::GetStubCallDescriptor
+                       |          |          
+                       |          |--33.37%--v8::internal::compiler::PipelineImpl::SelectInstructions
+                       |          |          v8::internal::compiler::PipelineImpl::AllocateRegistersForTopTier
+                       |          |          v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::OptimizeMovesPhase>
+                       |          |          v8::internal::compiler::MoveOptimizer::Run
+                       |          |          v8::internal::compiler::MoveOptimizer::CompressGaps
+                       |          |          
+                       |           --33.19%--v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::ComputeSchedulePhase>
+                       |                     v8::internal::compiler::Scheduler::ComputeSchedule
+                       |                     v8::internal::compiler::Scheduler::PrepareUses
+                       |                     v8::internal::compiler::PrepareUsesVisitor::Run
+                       |                     v8::internal::compiler::PrepareUsesVisitor::VisitInputs
+                       |                     v8::internal::compiler::Scheduler::IncrementUnscheduledUseCount
+                       |          
+                        --25.36%--v8::internal::(anonymous namespace)::PrepareJobWithHandleScope
+                                  v8::internal::OptimizedCompilationJob::PrepareJob
+                                  v8::internal::compiler::PipelineCompilationJob::PrepareJobImpl
+                                  v8::internal::compiler::PipelineImpl::CreateGraph
+                                  v8::internal::compiler::PipelineImpl::Run<v8::internal::compiler::InliningPhase>
+                                  v8::internal::compiler::InliningPhase::Run
+                                  v8::internal::compiler::GraphReducer::ReduceNode
+                                  v8::internal::compiler::GraphReducer::ReduceTop
+                                  v8::internal::compiler::GraphReducer::Reduce
+
+    28.85%    28.85%  [kernel.kallsyms] 
+            |          
+            |--48.10%--0
+            |          |          
+            |          |--94.44%--read
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_read
+            |          |          ksys_read
+            |          |          vfs_read
+            |          |          |          
+            |          |          |--93.06%--new_sync_read
+            |          |          |          ext4_file_read_iter
+            |          |          |          generic_file_read_iter
+            |          |          |          generic_file_buffered_read
+            |          |          |          copy_page_to_iter
+            |          |          |          |          
+            |          |          |          |--92.82%--copy_user_generic_unrolled
+            |          |          |          |          |          
+            |          |          |          |           --100.00%--asm_exc_page_fault
+            |          |          |          |                     exc_page_fault
+            |          |          |          |                     do_user_addr_fault
+            |          |          |          |                     |          
+            |          |          |          |                     |--88.38%--handle_mm_fault
+            |          |          |          |                     |          __handle_mm_fault
+            |          |          |          |                     |          do_anonymous_page
+            |          |          |          |                     |          |          
+            |          |          |          |                     |          |--75.31%--alloc_pages_vma
+            |          |          |          |                     |          |          __alloc_pages_nodemask
+            |          |          |          |                     |          |          |          
+            |          |          |          |                     |          |           --100.00%--get_page_from_freelist
+            |          |          |          |                     |          |                     clear_page_orig
+            |          |          |          |                     |          |          
+            |          |          |          |                     |          |--12.46%--mem_cgroup_charge
+            |          |          |          |                     |          |          mem_cgroup_charge_statistics.isra.0
+            |          |          |          |                     |          |          __count_memcg_events
+            |          |          |          |                     |          |          
+            |          |          |          |                     |           --12.23%--lru_cache_add_active_or_unevictable
+            |          |          |          |                     |          
+            |          |          |          |                      --11.62%--_cond_resched
+            |          |          |          |          
+            |          |          |           --7.18%--asm_exc_page_fault
+            |          |          |          
+            |          |           --6.94%--urandom_read
+            |          |                     urandom_read_nowarn.isra.0
+            |          |                     extract_crng
+            |          |                     _extract_crng
+            |          |          
+            |          |--5.56%--__cpu_indicator_init
+            |          |          asm_exc_page_fault
+            |          |          exc_page_fault
+            |          |          do_user_addr_fault
+            |          |          mem_cgroup_from_task
+            |           --0.00%--[...]
+            |          
+            |--23.28%--__libc_start_main
+            |          v8::Shell::Main
+            |          |          
+            |          |--70.60%--v8::Isolate::New
+            |          |          v8::Isolate::Initialize
+            |          |          v8::internal::Snapshot::Initialize
+            |          |          v8::internal::Isolate::InitWithSnapshot
+            |          |          v8::internal::Isolate::Init
+            |          |          |          
+            |          |          |--59.61%--__memmove_avx_unaligned_erms
+            |          |          |          asm_exc_page_fault
+            |          |          |          |          
+            |          |          |           --100.00%--exc_page_fault
+            |          |          |                     do_user_addr_fault
+            |          |          |                     handle_mm_fault
+            |          |          |                     __handle_mm_fault
+            |          |          |                     do_anonymous_page
+            |          |          |                     alloc_pages_vma
+            |          |          |                     __alloc_pages_nodemask
+            |          |          |                     get_page_from_freelist
+            |          |          |                     clear_page_orig
+            |          |          |          
+            |          |          |--20.48%--v8::internal::Builtins::EmitCodeCreateEvents
+            |          |          |          v8::internal::CodeEventDispatcher::CodeCreateEvent
+            |          |          |          __getpid
+            |          |          |          entry_SYSCALL_64
+            |          |          |          
+            |          |           --19.91%--v8::internal::StartupDeserializer::DeserializeIntoIsolate
+            |          |                     v8::internal::SerializerDeserializer::Iterate
+            |          |                     v8::internal::Deserializer::VisitRootPointers
+            |          |                     v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForRootSlots>
+            |          |                     v8::internal::Deserializer::ReadObject
+            |          |                     v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForHeapObject>
+            |          |                     v8::internal::Deserializer::ReadObject
+            |          |                     asm_exc_page_fault
+            |          |                     exc_page_fault
+            |          |                     do_user_addr_fault
+            |          |                     handle_mm_fault
+            |          |                     __handle_mm_fault
+            |          |                     do_anonymous_page
+            |          |                     lru_cache_add_active_or_unevictable
+            |          |                     lru_cache_add
+            |          |          
+            |          |--14.87%--v8::Shell::OnExit
+            |          |          v8::internal::Isolate::Delete
+            |          |          v8::internal::Isolate::~Isolate
+            |          |          v8::internal::SingleCopyReadOnlyArtifacts::~SingleCopyReadOnlyArtifacts
+            |          |          v8::base::BoundedPageAllocator::FreePages
+            |          |          __mprotect
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_mprotect
+            |          |          do_mprotect_pkey
+            |          |          vma_merge
+            |          |          
+            |           --14.54%--v8::Shell::RunMain
+            |                     v8::Shell::CreateEvaluationContext
+            |                     v8::Context::New
+            |                     v8::NewContext
+            |                     v8::internal::Bootstrapper::CreateEnvironment
+            |                     v8::internal::Genesis::Genesis
+            |                     v8::internal::Snapshot::NewContextFromSnapshot
+            |                     v8::internal::ContextDeserializer::DeserializeContext
+            |                     v8::internal::ContextDeserializer::Deserialize
+            |                     v8::internal::Deserializer::ReadObject
+            |                     v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForHandle>
+            |                     v8::internal::Deserializer::ReadObject
+            |                     v8::internal::Deserializer::ReadSingleBytecodeData<v8::internal::SlotAccessorForHeapObject>
+            |                     v8::internal::Deserializer::ReadObject
+            |                     asm_exc_page_fault
+            |                     exc_page_fault
+            |                     do_user_addr_fault
+            |                     handle_mm_fault
+            |                     __handle_mm_fault
+            |                     do_anonymous_page
+            |                     alloc_pages_vma
+            |                     __alloc_pages_nodemask
+            |                     get_page_from_freelist
+            |                     clear_page_orig
+            |          
+            |--6.33%--entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_exit_group
+            |          do_group_exit
+            |          do_exit
+            |          mmput
+            |          exit_mmap
+            |          |          
+            |          |--50.16%--tlb_finish_mmu
+            |          |          tlb_flush_mmu
+            |          |          free_pages_and_swap_cache
+            |          |          release_pages
+            |          |          free_unref_page_list
+            |          |          free_unref_page_commit
+            |          |          free_pcppages_bulk
+            |          |          
+            |           --49.84%--unmap_vmas
+            |                     unmap_single_vma
+            |                     unmap_page_range
+            |                     zap_pte_range.isra.0
+            |                     page_remove_rmap
+            |          
+            |--3.37%--0x6eec14803438b41
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          iov_iter_copy_from_user_atomic
+            |          copy_user_generic_unrolled
+            |          
+            |--3.33%--0xf45c1940f4101a8
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          iov_iter_copy_from_user_atomic
+            |          copy_user_generic_unrolled
+            |          
+            |--3.32%--0x455341e3d141cc00
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_begin
+            |          grab_cache_page_write_begin
+            |          pagecache_get_page
+            |          __page_cache_alloc
+            |          alloc_pages_current
+            |          __alloc_pages_nodemask
+            |          get_page_from_freelist
+            |          clear_page_orig
+            |          
+            |--3.29%--__munmap
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_munmap
+            |          __vm_munmap
+            |          __do_munmap
+            |          unmap_region
+            |          tlb_finish_mmu
+            |          tlb_flush_mmu
+            |          free_pages_and_swap_cache
+            |          release_pages
+            |          free_unref_page_list
+            |          free_unref_page_commit
+            |          free_pcppages_bulk
+            |          
+            |--3.29%--0x17608945238b4d00
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_begin
+            |          __ext4_journal_start_sb
+            |          jbd2__journal_start
+            |          _raw_read_lock
+            |          
+            |--2.85%--sysmalloc
+            |          asm_exc_page_fault
+            |          exc_page_fault
+            |          do_user_addr_fault
+            |          handle_mm_fault
+            |          __handle_mm_fault
+            |          do_anonymous_page
+            |          __pte_alloc
+            |          pte_alloc_one
+            |          alloc_pages_current
+            |          __alloc_pages_nodemask
+            |          __memcg_kmem_charge_page
+            |          __memcg_kmem_charge
+            |          
+            |--2.84%--0x41e589480000b264
+            |          _dl_sysdep_start
+            |          dl_main
+            |          _dl_relocate_object
+            |          asm_exc_page_fault
+            |          exc_page_fault
+            |          do_user_addr_fault
+            |          handle_mm_fault
+            |          __handle_mm_fault
+            |          |          
+            |           --100.00%--do_fault
+            |                     |          
+            |                     |--81.02%--filemap_map_pages
+            |                     |          alloc_set_pte
+            |                     |          page_add_file_rmap
+            |                     |          __unlock_page_memcg
+            |                     |          
+            |                     |--17.14%--__do_fault
+            |                     |          ext4_filemap_fault
+            |                     |          filemap_fault
+            |                     |          pagecache_get_page
+            |                     |          find_get_entry
+            |                     |          
+            |                      --1.84%--finish_fault
+            |                                alloc_set_pte
+            |                                page_add_new_anon_rmap
+             --0.00%--[...]
+
+    20.91%     0.00%  [unknown]         
+            |          
+            |--66.38%--0
+            |          |          
+            |          |--94.44%--read
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          __x64_sys_read
+            |          |          ksys_read
+            |          |          vfs_read
+            |          |          |          
+            |          |          |--93.06%--new_sync_read
+            |          |          |          ext4_file_read_iter
+            |          |          |          generic_file_read_iter
+            |          |          |          generic_file_buffered_read
+            |          |          |          copy_page_to_iter
+            |          |          |          |          
+            |          |          |          |--92.82%--copy_user_generic_unrolled
+            |          |          |          |          |          
+            |          |          |          |           --100.00%--asm_exc_page_fault
+            |          |          |          |                     exc_page_fault
+            |          |          |          |                     do_user_addr_fault
+            |          |          |          |                     |          
+            |          |          |          |                     |--88.38%--handle_mm_fault
+            |          |          |          |                     |          __handle_mm_fault
+            |          |          |          |                     |          do_anonymous_page
+            |          |          |          |                     |          |          
+            |          |          |          |                     |          |--75.31%--alloc_pages_vma
+            |          |          |          |                     |          |          __alloc_pages_nodemask
+            |          |          |          |                     |          |          |          
+            |          |          |          |                     |          |           --100.00%--get_page_from_freelist
+            |          |          |          |                     |          |                     clear_page_orig
+            |          |          |          |                     |          |          
+            |          |          |          |                     |          |--12.46%--mem_cgroup_charge
+            |          |          |          |                     |          |          mem_cgroup_charge_statistics.isra.0
+            |          |          |          |                     |          |          __count_memcg_events
+            |          |          |          |                     |          |          
+            |          |          |          |                     |           --12.23%--lru_cache_add_active_or_unevictable
+            |          |          |          |                     |          
+            |          |          |          |                      --11.62%--_cond_resched
+            |          |          |          |          
+            |          |          |           --7.18%--asm_exc_page_fault
+            |          |          |          
+            |          |           --6.94%--urandom_read
+            |          |                     urandom_read_nowarn.isra.0
+            |          |                     extract_crng
+            |          |                     _extract_crng
+            |          |          
+            |          |--5.56%--__cpu_indicator_init
+            |          |          asm_exc_page_fault
+            |          |          exc_page_fault
+            |          |          do_user_addr_fault
+            |          |          mem_cgroup_from_task
+            |           --0.00%--[...]
+            |          
+            |--9.24%--0x56118d8e7c40
+            |          __memmove_avx_unaligned_erms
+            |          
+            |--6.02%--0x41e589480000b264
+            |          _dl_sysdep_start
+            |          dl_main
+            |          _dl_relocate_object
+            |          |          
+            |           --100.00%--asm_exc_page_fault
+            |                     exc_page_fault
+            |                     do_user_addr_fault
+            |                     handle_mm_fault
+            |                     __handle_mm_fault
+            |                     |          
+            |                      --100.00%--do_fault
+            |                                |          
+            |                                |--81.02%--filemap_map_pages
+            |                                |          alloc_set_pte
+            |                                |          page_add_file_rmap
+            |                                |          __unlock_page_memcg
+            |                                |          
+            |                                |--17.14%--__do_fault
+            |                                |          ext4_filemap_fault
+            |                                |          filemap_fault
+            |                                |          pagecache_get_page
+            |                                |          find_get_entry
+            |                                |          
+            |                                 --1.84%--finish_fault
+            |                                           alloc_set_pte
+            |                                           page_add_new_anon_rmap
+            |          
+            |--4.65%--0x6eec14803438b41
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          iov_iter_copy_from_user_atomic
+            |          copy_user_generic_unrolled
+            |          
+            |--4.59%--0xf45c1940f4101a8
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          iov_iter_copy_from_user_atomic
+            |          copy_user_generic_unrolled
+            |          
+            |--4.58%--0x455341e3d141cc00
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_begin
+            |          grab_cache_page_write_begin
+            |          pagecache_get_page
+            |          __page_cache_alloc
+            |          alloc_pages_current
+            |          __alloc_pages_nodemask
+            |          get_page_from_freelist
+            |          clear_page_orig
+            |          
+            |--4.55%--0x17608945238b4d00
+            |          __GI___libc_write
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          new_sync_write
+            |          ext4_file_write_iter
+            |          ext4_buffered_write_iter
+            |          generic_perform_write
+            |          ext4_da_write_begin
+            |          __ext4_journal_start_sb
+            |          jbd2__journal_start
+            |          _raw_read_lock
+             --0.00%--[...]
+
+     1.26%     0.44%  ld-2.31.so        
+            |          
+            |--65.19%--_dl_sysdep_start
+            |          dl_main
+            |          _dl_relocate_object
+            |          asm_exc_page_fault
+            |          exc_page_fault
+            |          do_user_addr_fault
+            |          handle_mm_fault
+            |          __handle_mm_fault
+            |          |          
+            |           --100.00%--do_fault
+            |                     |          
+            |                     |--81.02%--filemap_map_pages
+            |                     |          alloc_set_pte
+            |                     |          page_add_file_rmap
+            |                     |          __unlock_page_memcg
+            |                     |          
+            |                     |--17.14%--__do_fault
+            |                     |          ext4_filemap_fault
+            |                     |          filemap_fault
+            |                     |          pagecache_get_page
+            |                     |          find_get_entry
+            |                     |          
+            |                      --1.84%--finish_fault
+            |                                alloc_set_pte
+            |                                page_add_new_anon_rmap
+            |          
+             --34.81%--0x41e589480000b264
+                       _dl_sysdep_start
+                       dl_main
+                       _dl_relocate_object
+
+     0.77%     0.00%  libgcc_s.so.1     
+            |
+            ---__cpu_indicator_init
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               mem_cgroup_from_task
+
+     0.00%     0.00%  libpthread-2.31.so
+            |
+            ---pthread_cond_wait@@GLIBC_2.3.2
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               __x64_sys_futex
+               do_futex
+               futex_wait
+               futex_wait_queue_me
+               schedule
+               __sched_text_start
+               finish_task_switch
+               __perf_event_task_sched_in
+               perf_pmu_enable.part.0
+               x86_pmu_enable
+               intel_pmu_enable_all
+               native_write_msr
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
