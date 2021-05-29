@@ -24,10 +24,27 @@ console.log(total);
 ### stat コマンドでの計測
 
 ```shell
-sudo perf stat out/x64.release/d8 --perf-prof --no-write-protect-code-memory test.js
+sudo perf stat out/x64.release/d8 --perf-prof --no-write-protect-code-memory test2.js
 ```
 
 ```shell
+10000000000
+
+ Performance counter stats for 'out/x64.release/d8 --perf-prof --no-write-protect-code-memory test2.js':
+
+         79,612.57 msec task-clock                #    0.999 CPUs utilized
+           379,917      context-switches          #    0.005 M/sec
+                 2      cpu-migrations            #    0.000 K/sec
+             4,662      page-faults               #    0.059 K/sec
+   353,945,945,272      cycles                    #    4.446 GHz
+   941,536,253,168      instructions              #    2.66  insn per cycle
+   183,455,639,652      branches                  # 2304.355 M/sec
+        44,438,066      branch-misses             #    0.02% of all branches
+
+      79.694331920 seconds time elapsed
+
+      78.668187000 seconds user
+       0.939174000 seconds sys
 
 ```
 
