@@ -32,19 +32,19 @@ sudo perf stat out/x64.release/d8 --perf-prof --no-write-protect-code-memory tes
 
  Performance counter stats for 'out/x64.release/d8 --perf-prof --no-write-protect-code-memory test2.js':
 
-         79,612.57 msec task-clock                #    0.999 CPUs utilized
-           379,917      context-switches          #    0.005 M/sec
-                 2      cpu-migrations            #    0.000 K/sec
-             4,662      page-faults               #    0.059 K/sec
-   353,945,945,272      cycles                    #    4.446 GHz
-   941,536,253,168      instructions              #    2.66  insn per cycle
-   183,455,639,652      branches                  # 2304.355 M/sec
-        44,438,066      branch-misses             #    0.02% of all branches
+          9,301.68 msec task-clock                #    0.999 CPUs utilized          
+               180      context-switches          #    0.019 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+             3,632      page-faults               #    0.390 K/sec                  
+    40,919,561,188      cycles                    #    4.399 GHz                    
+    95,103,244,928      instructions              #    2.32  insn per cycle         
+    34,306,490,735      branches                  # 3688.203 M/sec                  
+           353,807      branch-misses             #    0.00% of all branches        
 
-      79.694331920 seconds time elapsed
+       9.315403215 seconds time elapsed
 
-      78.668187000 seconds user
-       0.939174000 seconds sys
+       9.284785000 seconds user
+       0.015994000 seconds sys
 
 ```
 
@@ -105,7 +105,8 @@ sudo perf stat out/x64.release/d8 --perf-prof --no-write-protect-code-memory tes
 
 ```shell
 sudo perf record -g -k mono out/x64.release/d8 --perf-prof --no-write-protect-code-memory test.js
-sudo perf report --sort dso, comm -g fractal,0.5,caller
+sudo perf inject -j -i perf.data -o perf.data.jitted
+sudo perf report --sort dso, comm -g fractal,0.5,caller -i perf.data.jitted
 ```
 
 [record, report コマンドの結果のリンク](https://github.com/UMASHIBA1/v8-perf-report/tree/main/add-test/call-func-add-perf-report.txt)
