@@ -84,19 +84,21 @@ sudo perf stat out/x64.release/d8 --perf-prof --no-write-protect-code-memory tes
 
  Performance counter stats for 'out/x64.release/d8 --perf-prof --no-write-protect-code-memory test.js':
 
-         68,689.29 msec task-clock                #    1.010 CPUs utilized
-           223,990      context-switches          #    0.003 M/sec
-                 5      cpu-migrations            #    0.000 K/sec
-             4,659      page-faults               #    0.068 K/sec
-   301,938,277,387      cycles                    #    4.396 GHz
-   941,659,644,166      instructions              #    3.12  insn per cycle
-   183,245,782,063      branches                  # 2667.749 M/sec
-        47,833,184      branch-misses             #    0.03% of all branches
+          8,725.64 msec task-clock                #    0.993 CPUs utilized          
+               288      context-switches          #    0.033 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+             3,752      page-faults               #    0.430 K/sec                  
+    39,689,008,071      cycles                    #    4.549 GHz                    
+    95,131,233,685      instructions              #    2.40  insn per cycle         
+    34,311,176,375      branches                  # 3932.226 M/sec                  
+           396,547      branch-misses             #    0.00% of all branches        
 
-      68.017509891 seconds time elapsed
+       8.791098575 seconds time elapsed
 
-      45.631521000 seconds user
-      23.338909000 seconds sys
+       8.694314000 seconds user
+       0.031949000 seconds sys
+
+
 ```
 
 ### record, report コマンドでの計測
