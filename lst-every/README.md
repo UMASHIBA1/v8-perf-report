@@ -37,19 +37,19 @@ sudo perf stat out/x64.release/d8 --perf-prof --no-write-protect-code-memory lst
 ```shell
  Performance counter stats for 'out/x64.release/d8 --perf-prof --no-write-protect-code-memory lst-every.js':
 
-          5,479.12 msec task-clock                #    0.998 CPUs utilized          
-               264      context-switches          #    0.048 K/sec                  
+          5,472.43 msec task-clock                #    0.998 CPUs utilized          
+               193      context-switches          #    0.035 K/sec                  
                  0      cpu-migrations            #    0.000 K/sec                  
-            18,253      page-faults               #    0.003 M/sec                  
-    24,818,669,529      cycles                    #    4.530 GHz                    
-    76,630,653,215      instructions              #    3.09  insn per cycle         
-    20,758,412,282      branches                  # 3788.638 M/sec                  
-           255,319      branch-misses             #    0.00% of all branches        
+            18,254      page-faults               #    0.003 M/sec                  
+    24,804,353,486      cycles                    #    4.533 GHz                    
+    76,629,463,584      instructions              #    3.09  insn per cycle         
+    20,758,198,874      branches                  # 3793.232 M/sec                  
+           253,680      branch-misses             #    0.00% of all branches        
 
-       5.491397616 seconds time elapsed
+       5.484703515 seconds time elapsed
 
-       5.450803000 seconds user
-       0.027932000 seconds sys
+       5.432361000 seconds user
+       0.039914000 seconds sys
 
 ```
 
