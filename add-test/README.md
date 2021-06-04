@@ -13,12 +13,17 @@ Processor Intel® Core™ i7-9700 CPU @ 3.00GHzの2コアを割り当て
 ## 関数呼び出しのない版
 
 ```javascript
-let total = 0;
+// test2.js
+const calc =() => {
+  let total = 0;
 
-for (let i = 0; i < 10000000000; i++) {
-  total = total + 1;
+  for (let i = 0; i < 10000000000; i++) {
+    total = total + 1;
+  }
+  console.log(total);
 }
-console.log(total);
+
+calc();
 ```
 
 ### stat コマンドでの計測
@@ -61,6 +66,8 @@ sudo perf report --sort dso, comm -g fractal,0.5,caller -i perf.data.jitted
 ## 関数呼び出しで計算する版
 
 ```javascript
+// test.js
+const calc = () => {
 let total = 0;
 
 const add = (a, b) => {
@@ -71,6 +78,11 @@ for (let i = 0; i < 10000000000; i++) {
   total = add(total, 1);
 }
 console.log(total);
+
+}
+
+calc();
+
 ```
 
 ### stat コマンドでの計測
