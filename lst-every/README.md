@@ -13,7 +13,10 @@ Processor Intel® Core™ i7-9700 CPU @ 3.00GHzの2コアを割り当て
 ## code
 ```javascript
 const calledFunc = (lst) => {
-    lst.every((i) => typeof i === "number");
+    const checkIsNumber = (i) => {
+        return typeof i === "number";
+    }
+    lst.every(checkIsNumber);
 };
 
 const funcCall = () => {
