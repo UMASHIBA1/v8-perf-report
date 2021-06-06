@@ -1,21 +1,57 @@
-# Nodeで調査
+# Node で調査
+
+## 実行環境
+
+```
+Window上のVMWare Workstation 16 Player上のUbuntu20.04.2 LTS
+Memory 8GB割り当て
+Processor Intel® Core™ i7-9700 CPU @ 3.00GHzの2コアを割り当て
+```
+
+<img src="https://user-images.githubusercontent.com/49422601/119885136-63670080-bf6c-11eb-8948-6f6aa17e5a34.png" width="600px">
+
+## code
+
+```javascript
+const calledFunc = (lst) => {
+  const checkIsNumber = (i) => {
+    return typeof i === "number";
+  };
+  lst.every(checkIsNumber);
+};
+
+const funcCall = () => {
+  const numLst = [...Array(5000000)].map((_, i) => i);
+  const lst = [];
+  for (let i = 0; i < 100; i++) {
+    calledFunc(numLst);
+  }
+  console.log(lst);
+};
+
+funcCall();
+```
 
 ## 参考
+
 https://asciinema.org/a/80401
 
-動画で実行していたコード
+動画で実行していたスクリプト
+
 ```
 perf record -- node --perf-basic-prof --print-code --redirect-code-traces /tmp/fib.js
 perf report --objdump=$HOME/src/chr/v8/tools/objdump-v8
 ```
- 
-## my evaluation code
+
+## 自分が実行したスクリプト
+
 ```
 sudo perf record -- node --perf-basic-prof-only-functions --print-code --redirect-code-traces lst-every.js
 sudo perf report --objdump=../../../v8/tools/objdump-v8  > perf-report.txt
 ```
 
-checkIsNumber
+## checkIsNumber 関数
+
 ```
 --- Raw source ---
 (i) => {
@@ -93,7 +129,7 @@ Inlined functions (count = 0)
 
 Deoptimization Input Data (deopt points = 1)
  index  bytecode-offset    pc
-     0               -1    ac 
+     0               -1    ac
 
 Safepoints (size = 21)
 0x27bbbf2032ec      ac    b2  110000 (sp -> fp)       0
@@ -109,3 +145,100 @@ RelocInfo (size = 26)
 --- End code ---
 
 ```
+
+## 無名関数(引数の受け渡しをみるのにとてもよさそう)
+
+```
+(_, i) => i)
+
+--- Optimized code ---
+optimization_id = 0
+source_position = 211
+kind = OPTIMIZED_FUNCTION
+stack_slots = 5
+compiler = turbofan
+address = 0x27bbbf202fa1
+
+Instructions (size = 128)
+0x27bbbf203000     0  488b59c0       REX.W movq rbx,[rcx-0x40]
+0x27bbbf203004     4  f6430f01       testb [rbx+0xf],0x1
+0x27bbbf203008     8  740d           jz 0x27bbbf203017  <+0x17>
+0x27bbbf20300a     a  49ba00cc3b0100000000 REX.W movq r10,0x13bcc00  (CompileLazyDeoptimizedCode)
+0x27bbbf203014    14  41ffe2         jmp r10
+0x27bbbf203017    17  55             push rbp
+0x27bbbf203018    18  4889e5         REX.W movq rbp,rsp
+0x27bbbf20301b    1b  56             push rsi
+0x27bbbf20301c    1c  57             push rdi
+0x27bbbf20301d    1d  4883ec08       REX.W subq rsp,0x8
+0x27bbbf203021    21  493b65e0       REX.W cmpq rsp,[r13-0x20] (external value (StackGuard::address_of_jslimit()))
+0x27bbbf203025    25  0f860b000000   jna 0x27bbbf203036  <+0x36>
+0x27bbbf20302b    2b  488b4510       REX.W movq rax,[rbp+0x10]
+0x27bbbf20302f    2f  488be5         REX.W movq rsp,rbp
+0x27bbbf203032    32  5d             pop rbp
+0x27bbbf203033    33  c21800         ret 0x18
+0x27bbbf203036    36  48ba0000000028000000 REX.W movq rdx,0x2800000000
+0x27bbbf203040    40  52             push rdx
+0x27bbbf203041    41  488975e8       REX.W movq [rbp-0x18],rsi
+0x27bbbf203045    45  48bb30c1070100000000 REX.W movq rbx,0x107c130
+0x27bbbf20304f    4f  b801000000     movl rax,0x1
+0x27bbbf203054    54  488bd6         REX.W movq rdx,rsi
+0x27bbbf203057    57  48be21010c69e3130000 REX.W movq rsi,0x13e3690c0121    ;; object: 0x13e3690c0121 <NativeContext[239]>
+0x27bbbf203061    61  49ba4032420100000000 REX.W movq r10,0x1423240  (CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit)
+0x27bbbf20306b    6b  41ffd2         call r10
+0x27bbbf20306e    6e  ebbb           jmp 0x27bbbf20302b  <+0x2b>
+0x27bbbf203070    70  90             nop
+0x27bbbf203071    71  49c7c500000000 REX.W movq r13,0x0      ;; debug: deopt position, script offset '211'
+                                                             ;; debug: deopt position, inlining id '-1'
+                                                             ;; debug: deopt reason '(unknown)'
+                                                             ;; debug: deopt index 0
+0x27bbbf203078    78  e8e3ef0700     call 0x27bbbf282060     ;; lazy deoptimization bailout
+0x27bbbf20307d    7d  0f1f00         nop
+
+Source positions:
+ pc offset  position
+         0       211
+        2b       222
+        36       211
+
+Inlined functions (count = 0)
+
+Deoptimization Input Data (deopt points = 1)
+ index  bytecode-offset    pc
+     0               -1    6e
+
+Safepoints (size = 21)
+0x27bbbf20306e      6e    71  10000 (sp -> fp)       0
+
+RelocInfo (size = 26)
+0x27bbbf203059  full embedded object  (0x13e3690c0121 <NativeContext[239]>)
+0x27bbbf203071  deopt script offset  (211)
+0x27bbbf203071  deopt inlining id  (-1)
+0x27bbbf203071  deopt reason  ((unknown))
+0x27bbbf203071  deopt index
+0x27bbbf203079  runtime entry  (lazy deoptimization bailout)
+
+--- End code ---
+```
+
+## checkIsNumber と無名関数を比較したときこの部分が共通だった
+
+```
+0x27bbbf203000     0  488b59c0       REX.W movq rbx,[rcx-0x40]
+0x27bbbf203004     4  f6430f01       testb [rbx+0xf],0x1
+0x27bbbf203008     8  740d           jz 0x27bbbf203017  <+0x17>
+0x27bbbf20300a     a  49ba00cc3b0100000000 REX.W movq r10,0x13bcc00  (CompileLazyDeoptimizedCode)
+0x27bbbf203014    14  41ffe2         jmp r10
+0x27bbbf203017    17  55             push rbp
+0x27bbbf203018    18  4889e5         REX.W movq rbp,rsp
+0x27bbbf20301b    1b  56             push rsi
+0x27bbbf20301c    1c  57             push rdi
+0x27bbbf20301d    1d  4883ec08       REX.W subq rsp,0x8
+0x27bbbf203021    21  493b65e0       REX.W cmpq rsp,[r13-0x20] (external value (StackGuard::address_of_jslimit()))
+0x27bbbf203025    25  0f860b000000   jna 0x27bbbf203036  <+0x36>
+0x27bbbf20302b    2b  488b4510       REX.W movq rax,[rbp+0x10]
+```
+
+### 何をしているのだろう？
+
+わからなかった...
+これから調査したい
