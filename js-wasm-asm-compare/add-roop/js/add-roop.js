@@ -1,4 +1,3 @@
-const performance = require("perf_hooks").performance;
 
 const fib = function (n) {
   if (n <= 1) {
