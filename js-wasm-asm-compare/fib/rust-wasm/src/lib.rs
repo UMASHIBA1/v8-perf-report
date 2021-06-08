@@ -9,11 +9,10 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-extern {
-    fn alert(s: &str);
-}
+pub fn fib(n: i64) -> i64 {
+    if n <= 1 {
+        return n
+    }
 
-#[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, rust-wasm!");
+    fib(n - 1) + fib(n - 2)
 }
