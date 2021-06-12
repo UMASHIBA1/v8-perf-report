@@ -1,0 +1,212 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'cycles'
+# Event count (approx.): 2397426646
+#
+# Overhead  Command  Shared Object        Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+# ........  .......  ...................  ..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    89.50%  node     [JIT] tid 9445       [.] Function:wasm-function[0]-0-turbofan
+     0.68%  node     node                 [.] v8::internal::Scanner::Next
+     0.27%  node     node                 [.] std::__find_if<unsigned short const*, __gnu_cxx::__ops::_Iter_pred<v8::internal::Utf16CharacterStream::AdvanceUntil<v8::internal::Scanner::ScanIdentifierOrKeywordInner()::{lambda(int)#1}>(v8::internal::Scanner::ScanIdentifierOrKeywordInner()::{lambda(int)#1})::{lambda(unsigned short)#1}> >
+     0.20%  node     [kernel.kallsyms]    [k] native_write_msr
+     0.18%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseAssignmentExpressionCoverGrammar
+     0.18%  node     node                 [.] v8::internal::AstValueFactory::GetOneByteStringInternal
+     0.16%  node     node                 [.] Cr_z_inflate_fast
+     0.14%  node     [kernel.kallsyms]    [k] clear_page_orig
+     0.14%  node     node                 [.] v8::base::TemplateHashMapImpl<unsigned long, v8::internal::SerializerReference, v8::base::KeyEqualityMatcher<long>, v8::base::DefaultAllocationPolicy>::Resize
+     0.14%  node     node                 [.] v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::FindEntry
+     0.12%  node     node                 [.] v8::internal::Deserializer::ReadData<v8::internal::FullMaybeObjectSlot>
+     0.09%  node     [JIT] tid 9445       [.] 0x00002633a0c26000
+     0.09%  node     libc-2.31.so         [.] _int_free
+     0.09%  node     node                 [.] v8::internal::interpreter::ConstantArrayBuilder::AllocateIndexArray
+     0.09%  node     node                 [.] v8::internal::CalculateLineEndsImpl<unsigned char>
+     0.09%  node     libc-2.31.so         [.] unlink_chunk.isra.0
+     0.09%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseVariableDeclarations
+     0.09%  node     node                 [.] v8::internal::Serializer::ObjectSerializer::VisitPointers
+     0.09%  node     libstdc++.so.6.0.28  [.] std::_Rb_tree_insert_and_rebalance
+     0.09%  node     node                 [.] v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::base::DefaultAllocationPolicy>::Resize
+     0.09%  node     libc-2.31.so         [.] __memmove_avx_unaligned_erms
+     0.09%  node     [kernel.kallsyms]    [k] cgroup_throttle_swaprate
+     0.09%  node     node                 [.] v8::internal::AstValueFactory::GetString
+     0.09%  node     node                 [.] v8::internal::AstRawString::Compare
+     0.09%  node     [kernel.kallsyms]    [k] __count_memcg_events
+     0.09%  node     node                 [.] v8::internal::FeedbackMetadata::New<v8::internal::Isolate>
+     0.09%  node     node                 [.] v8::internal::PreParser::GetIdentifier
+     0.09%  node     libc-2.31.so         [.] _IO_do_write@@GLIBC_2.2.5
+     0.08%  node     [kernel.kallsyms]    [k] free_pcppages_bulk
+     0.08%  node     [kernel.kallsyms]    [k] fsnotify
+     0.08%  node     [kernel.kallsyms]    [k] xas_load
+     0.08%  node     [kernel.kallsyms]    [k] zap_pte_range.isra.0
+     0.05%  node     [kernel.kallsyms]    [k] _raw_spin_lock_irqsave
+     0.05%  node     node                 [.] v8::internal::MemCopy
+     0.05%  node     node                 [.] v8::internal::JSFunction::InitializeFeedbackCell
+     0.05%  node     [kernel.kallsyms]    [k] filemap_map_pages
+     0.05%  node     node                 [.] v8::internal::Scope::ResolveVariablesRecursively
+     0.05%  node     node                 [.] v8::internal::FuncNameInferrer::PushVariableName
+     0.05%  node     node                 [.] v8::internal::DeclarationScope::DeclarationScope
+     0.05%  node     node                 [.] v8::internal::SharedFunctionInfo::inferred_name
+     0.05%  node     node                 [.] v8::internal::ExpressionScope<v8::internal::ParserTypes<v8::internal::Parser> >::NewVariable
+     0.05%  node     node                 [.] v8::internal::AccumulationScope<v8::internal::ParserTypes<v8::internal::Parser> >::AccumulationScope
+     0.05%  node     node                 [.] Builtins_CreateEmptyObjectLiteralHandler
+     0.05%  node     node                 [.] v8::internal::interpreter::BytecodeGenerator::VisitNoStackOverflowCheck
+     0.05%  node     node                 [.] Builtins_Call_ReceiverIsNullOrUndefined
+     0.05%  node     node                 [.] v8::internal::interpreter::HandlerTableBuilder::HandlerTableBuilder
+     0.05%  node     node                 [.] v8::internal::interpreter::BytecodeArrayWriter::EmitBytecode
+     0.05%  node     node                 [.] v8::internal::ScopeInfo::ModuleInfoIndex
+     0.05%  node     node                 [.] Builtins_StarHandler
+     0.05%  node     node                 [.] std::vector<v8::internal::interpreter::ConstantArrayBuilder::Entry, v8::internal::ZoneAllocator<v8::internal::interpreter::ConstantArrayBuilder::Entry> >::_M_realloc_insert<v8::internal::interpreter::ConstantArrayBuilder::Entry const&>
+     0.05%  node     node                 [.] Builtins_ArgumentsAdaptorTrampoline
+     0.05%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::Expect
+     0.05%  node     node                 [.] v8::internal::Scope::Lookup<(v8::internal::Scope::ScopeLookupMode)0>
+     0.05%  node     node                 [.] v8::internal::Dictionary<v8::internal::NameDictionary, v8::internal::NameDictionaryShape>::Add<v8::internal::Isolate>
+     0.05%  node     node                 [.] v8::internal::Scanner::SkipSingleLineComment
+     0.05%  node     node                 [.] v8::internal::Map::TransitionToDataProperty
+     0.05%  node     node                 [.] std::_Rb_tree<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*>, std::pair<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> const, int>, std::_Select1st<std::pair<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> const, int> >, std::less<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> >, v8::internal::ZoneAllocator<std::pair<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> const, int> > >::find
+     0.05%  node     node                 [.] v8::internal::Serializer::ObjectSerializer::SerializePrologue
+     0.05%  node     node                 [.] v8::base::TimeTicks::HighResolutionNow
+     0.05%  node     node                 [.] v8::internal::StringTable::LookupString
+     0.05%  node     node                 [.] v8::internal::(anonymous namespace)::CreateLiteral<v8::internal::(anonymous namespace)::ObjectLiteralHelper>
+     0.05%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseExpressionCoverGrammar
+     0.05%  node     node                 [.] std::_Rb_tree<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*>, std::pair<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> const, int>, std::_Select1st<std::pair<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> const, int> >, std::less<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> >, v8::internal::ZoneAllocator<std::pair<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> const, int> > >::_M_emplace_unique<std::pair<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*>, int>&>
+     0.05%  node     node                 [.] v8::internal::TransitionsAccessor::Insert
+     0.05%  node     node                 [.] v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterTransfer
+     0.05%  node     node                 [.] v8::internal::FactoryBase<v8::internal::Factory>::NewFixedArrayWithFiller
+     0.05%  node     node                 [.] v8::internal::Scope::Snapshot::Reparent
+     0.05%  node     node                 [.] v8::internal::Scanner::ScanString
+     0.05%  node     node                 [.] v8::internal::interpreter::BytecodeRegisterOptimizer::Materialize
+     0.05%  node     node                 [.] Builtins_SubSmiHandler
+     0.05%  node     node                 [.] v8::internal::interpreter::BytecodeGenerator::BuildVariableLoad
+     0.05%  node     [kernel.kallsyms]    [k] do_syscall_64
+     0.05%  node     node                 [.] v8::internal::heap_internals::GenerationalBarrierInternal
+     0.05%  node     node                 [.] v8::internal::compiler::X64OperandGenerator::GenerateMemoryOperandInputs
+     0.05%  node     [kernel.kallsyms]    [k] xas_start
+     0.05%  node     node                 [.] v8::internal::Worklist<std::pair<v8::internal::HeapObject, int>, 256>::Push
+     0.05%  node     node                 [.] v8::internal::Serializer::ObjectSerializer::VisitPointers
+     0.05%  node     node                 [.] v8::internal::Map::should_be_fast_prototype_map
+     0.05%  node     node                 [.] v8::internal::SharedFunctionInfo::ScriptIterator::ScriptIterator
+     0.05%  node     libc-2.31.so         [.] __mempcpy_avx_unaligned_erms
+     0.05%  node     node                 [.] v8::base::TemplateHashMapImpl<long, unsigned int, v8::base::KeyEqualityMatcher<long>, v8::internal::ZoneAllocationPolicy>::Resize
+     0.05%  node     [kernel.kallsyms]    [k] page_add_file_rmap
+     0.05%  node     node                 [.] v8::internal::JSObject::DefineOwnPropertyIgnoreAttributes
+     0.05%  node     node                 [.] v8::internal::PreParser::ParseFunctionLiteral
+     0.05%  node     node                 [.] v8::internal::SharedFunctionInfo::UpdateFunctionMapIndex
+     0.05%  node     libc-2.31.so         [.] __strcmp_avx2
+     0.05%  node     node                 [.] v8::internal::ExpressionParsingScope<v8::internal::ParserTypes<v8::internal::PreParser> >::ExpressionParsingScope
+     0.05%  node     node                 [.] v8::internal::Factory::AllocateRaw
+     0.05%  node     node                 [.] v8::internal::Map::SetInstanceDescriptors
+     0.05%  node     node                 [.] v8::internal::SharedFunctionInfo::GetCode
+     0.05%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::ParsePrimaryExpression
+     0.05%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseUnaryOrPrefixExpression
+     0.05%  node     node                 [.] v8::internal::interpreter::BytecodeArrayBuilder::StoreAccumulatorInRegister
+     0.05%  node     node                 [.] v8::internal::PagedSpace::AllocateRaw
+     0.05%  node     [kernel.kallsyms]    [k] __find_get_block
+     0.05%  node     node                 [.] v8::internal::interpreter::BytecodeRegisterOptimizer::GetInputRegister
+     0.05%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseExpressionOrLabelledStatement
+     0.05%  node     node                 [.] v8::internal::OrderedHashSet::Add
+     0.05%  node     node                 [.] v8::internal::DeclarationScope::CheckConflictingVarDeclarations
+     0.05%  node     libc-2.31.so         [.] malloc
+     0.05%  node     node                 [.] v8::internal::DescriptorArray::CopyFrom
+     0.05%  node     node                 [.] v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::Rehash
+     0.05%  node     node                 [.] v8::internal::interpreter::BytecodeArrayBuilder::BytecodeArrayBuilder
+     0.05%  node     node                 [.] v8::internal::interpreter::BytecodeArrayWriter::Write
+     0.05%  node     node                 [.] v8::internal::ObjectLiteral::BuildBoilerplateDescription<v8::internal::Isolate>
+     0.05%  node     node                 [.] Builtins_CallFunction_ReceiverIsAny
+     0.05%  node     node                 [.] v8::internal::LookupIterator::LookupInRegularHolder<false>
+     0.05%  node     node                 [.] v8::internal::Serializer::SerializeBackReference
+     0.05%  node     node                 [.] v8::internal::ScopeInfo::ContextSlotIndex
+     0.05%  node     node                 [.] std::_Hashtable<node::CleanupHookCallback, node::CleanupHookCallback, std::allocator<node::CleanupHookCallback>, std::__detail::_Identity, node::CleanupHookCallback::Equal, node::CleanupHookCallback::Hash, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_erase
+     0.05%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseBlock
+     0.05%  node     node                 [.] v8::internal::Heap::AllocateRawWith<(v8::internal::Heap::AllocationRetryMode)1>
+     0.05%  node     node                 [.] v8::internal::interpreter::BytecodeArrayBuilder::CallProperty
+     0.05%  node     libstdc++.so.6.0.28  [.] std::string::_M_mutate
+     0.05%  node     node                 [.] v8::internal::JSObject::OptimizeAsPrototype
+     0.05%  node     node                 [.] v8::base::TemplateHashMapImpl<unsigned long, v8::internal::SerializerReference, v8::base::KeyEqualityMatcher<long>, v8::base::DefaultAllocationPolicy>::LookupOrInsert<v8::base::TemplateHashMapImpl<unsigned long, v8::internal::SerializerReference, v8::base::KeyEqualityMatcher<long>, v8::base::DefaultAllocationPolicy>::LookupOrInsert(unsigned long const&, unsigned int, v8::base::DefaultAllocationPolicy)::{lambda()#1}>
+     0.05%  node     node                 [.] v8::internal::ParserBase<v8::internal::Parser>::ParseAssignmentExpressionCoverGrammar
+     0.05%  node     node                 [.] v8::internal::CodeSerializer::SerializeObject
+     0.05%  node     node                 [.] v8::internal::LookupIterator::NextInternal<false>
+     0.05%  node     node                 [.] v8::internal::Serializer::ObjectSerializer::SerializeContent
+     0.05%  node     node                 [.] v8::internal::FactoryBase<v8::internal::Factory>::NewSharedFunctionInfo
+     0.04%  node     libc-2.31.so         [.] _int_malloc
+     0.04%  node     node                 [.] v8::internal::ParserBase<v8::internal::Parser>::ParseLeftHandSideContinuation
+     0.04%  node     node                 [.] Builtins_KeyedStoreIC_Megamorphic
+     0.04%  node     node                 [.] v8::internal::Logger::CodeCreateEvent
+     0.04%  node     node                 [.] v8::internal::(anonymous namespace)::AddDescriptorsByTemplate
+     0.04%  node     node                 [.] v8::internal::ParserBase<v8::internal::Parser>::ParseLogicalExpression
+     0.04%  node     [kernel.kallsyms]    [k] uncharge_page
+     0.04%  node     libstdc++.so.6.0.28  [.] std::string::_S_construct<char const*>
+     0.04%  node     node                 [.] v8::internal::ScopedList<v8::internal::Expression*, void*>::CopyTo
+     0.04%  node     node                 [.] v8::internal::ParserBase<v8::internal::Parser>::ParseFormalParameterList
+     0.04%  node     node                 [.] Builtins_LdaConstantHandler
+     0.04%  node     [kernel.kallsyms]    [k] vmacache_find
+     0.04%  node     node                 [.] v8::internal::compiler::LinearScanAllocator::ForwardStateTo
+     0.04%  node     node                 [.] v8::internal::FactoryBase<v8::internal::Factory>::AllocateRawOneByteInternalizedString
+     0.04%  node     [kernel.kallsyms]    [k] ext4_file_write_iter
+     0.04%  node     node                 [.] Cr_z_adler32_z
+     0.04%  node     node                 [.] v8::internal::interpreter::BytecodeRegisterOptimizer::PrepareOutputRegister
+     0.04%  node     node                 [.] v8::internal::AccumulationScope<v8::internal::ParserTypes<v8::internal::PreParser> >::~AccumulationScope
+     0.04%  node     node                 [.] v8::internal::Scope::AllocateVariablesRecursively
+     0.04%  node     [kernel.kallsyms]    [k] jbd2__journal_start
+     0.04%  node     node                 [.] v8::internal::ExpressionScope<v8::internal::ParserTypes<v8::internal::PreParser> >::NewVariable
+     0.04%  node     libstdc++.so.6.0.28  [.] std::_Hash_bytes
+     0.04%  node     [kernel.kallsyms]    [k] memcpy_orig
+     0.04%  node     node                 [.] v8::internal::(anonymous namespace)::JSObjectWalkVisitor<v8::internal::(anonymous namespace)::DeprecationUpdateContext>::StructureWalk
+     0.04%  node     node                 [.] v8::internal::Map::SetPrototype
+     0.04%  node     [kernel.kallsyms]    [k] error_entry
+     0.04%  node     libstdc++.so.6.0.28  [.] std::string::append
+     0.04%  node     libc-2.31.so         [.] __strlen_avx2
+     0.04%  node     [kernel.kallsyms]    [k] __handle_mm_fault
+     0.04%  node     [kernel.kallsyms]    [k] pick_next_task_fair
+     0.04%  node     [kernel.kallsyms]    [k] crc32c_pcl_intel_update
+     0.04%  node     [kernel.kallsyms]    [k] jbd2_journal_stop
+     0.04%  node     node                 [.] v8::internal::StubCache::Initialize
+     0.04%  node     [kernel.kallsyms]    [k] mutex_unlock
+     0.04%  node     libc-2.31.so         [.] __libc_disable_asynccancel
+     0.04%  node     node                 [.] v8::internal::(anonymous namespace)::CreateFillerObjectAtImpl
+     0.04%  node     [kernel.kallsyms]    [k] __ext4_get_inode_loc
+     0.04%  node     node                 [.] v8::internal::String::ComputeAndSetHash
+     0.04%  node     node                 [.] v8::internal::compiler::GraphAssembler::~GraphAssembler
+     0.04%  node     libc-2.31.so         [.] __strcpy_avx2
+     0.04%  node     [kernel.kallsyms]    [k] mm_update_next_owner
+     0.04%  node     [kernel.kallsyms]    [k] n_tty_write
+     0.04%  node     [kernel.kallsyms]    [k] page_counter_try_charge
+     0.04%  node     ld-2.31.so           [.] do_lookup_x
+     0.04%  node     node                 [.] v8::internal::Builtins::Lookup
+     0.03%  node     node                 [.] _GLOBAL__sub_I__ZNK2v88internal13CodeReference13constant_poolEv
+     0.03%  node     node                 [.] v8::internal::Isolate::CurrentEmbeddedBlob
+     0.03%  node     [kernel.kallsyms]    [k] ext4_dirty_inode
+     0.03%  node     [kernel.kallsyms]    [k] __ext4_journal_start_sb
+     0.03%  node     node                 [.] v8::internal::wasm::GetExportWrapperIndex
+     0.03%  node     node                 [.] v8::internal::HeapObject::SizeFromMap
+     0.03%  node     node                 [.] v8::internal::Map::GetOrCreatePrototypeChainValidityCell
+     0.03%  node     node                 [.] v8::internal::EmbeddedData::InstructionStartOfBuiltin
+     0.02%  node     node                 [.] v8::internal::(anonymous namespace)::HandleApiCallHelper<true>
+     0.02%  node     libstdc++.so.6.0.28  [.] std::__ostream_insert<char, std::char_traits<char> >
+     0.02%  node     [kernel.kallsyms]    [k] pick_next_entity
+     0.02%  node     [kernel.kallsyms]    [k] tty_write
+     0.02%  node     node                 [.] memset@plt
+     0.02%  node     [kernel.kallsyms]    [k] file_tty_write.isra.0
+     0.02%  node     [kernel.kallsyms]    [k] sched_clock
+     0.02%  node     [kernel.kallsyms]    [k] update_curr
+     0.02%  node     [kernel.kallsyms]    [k] fsnotify_parent
+     0.02%  node     libc-2.31.so         [.] _itoa_word
+     0.01%  node     [kernel.kallsyms]    [k] vfs_write
+     0.01%  node     [kernel.kallsyms]    [k] entry_SYSCALL_64_after_hwframe
+     0.01%  node     libc-2.31.so         [.] __vfprintf_internal
+     0.01%  node     libstdc++.so.6.0.28  [.] 0x000000000009a3c0
+     0.01%  node     [kernel.kallsyms]    [k] psi_group_change
+     0.00%  node     [kernel.kallsyms]    [k] cpuacct_charge
+     0.00%  node     [kernel.kallsyms]    [k] futex_wait
+     0.00%  node     [kernel.kallsyms]    [k] do_user_addr_fault
+     0.00%  node     [kernel.kallsyms]    [k] __softirqentry_text_start
+     0.00%  node     [kernel.kallsyms]    [k] intel_pmu_enable_all
+     0.00%  node     [kernel.kallsyms]    [k] __perf_event_task_sched_in
+     0.00%  perf     [kernel.kallsyms]    [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
