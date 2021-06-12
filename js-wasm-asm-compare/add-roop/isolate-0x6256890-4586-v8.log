@@ -1,0 +1,2 @@
+v8-version,8,4,371,23,-node.63,0
+code-deopt,40558,672,0x2270fb143000,0,42,eager,</home/uma/Documents/v8-test/v8/v8-perf-report/js-wasm-asm-compare/add-roop/add-roop.js:2:14> inlined at </home/uma/Documents/v8-test/v8/v8-perf-report/js-wasm-asm-compare/add-roop/add-roop.js:9:13>,overflow
