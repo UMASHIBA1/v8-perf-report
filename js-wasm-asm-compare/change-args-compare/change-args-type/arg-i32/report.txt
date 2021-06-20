@@ -1,0 +1,67 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 74  of event 'cpu-clock:pppH'
+# Event count (approx.): 18500000
+#
+# Overhead  Command  Shared Object        Symbol                                                                                                                                                                                                                                                                                                
+# ........  .......  ...................  ......................................................................................................................................................................................................................................................................................................
+#
+    16.22%  node     [kernel.kallsyms]    [k] __lock_text_start
+     9.46%  node     node                 [.] v8::internal::Scanner::Next
+     6.76%  node     [kernel.kallsyms]    [k] __prepare_exit_to_usermode
+     2.70%  node     [kernel.kallsyms]    [k] clear_page_orig
+     2.70%  node     node                 [.] v8::internal::interpreter::BytecodeArrayWriter::EmitBytecode
+     1.35%  node     [kernel.kallsyms]    [k] __alloc_pages_nodemask
+     1.35%  node     [kernel.kallsyms]    [k] __d_lookup
+     1.35%  node     [kernel.kallsyms]    [k] __legitimize_mnt
+     1.35%  node     [kernel.kallsyms]    [k] _raw_spin_lock
+     1.35%  node     [kernel.kallsyms]    [k] add_transaction_credits
+     1.35%  node     [kernel.kallsyms]    [k] do_user_addr_fault
+     1.35%  node     [kernel.kallsyms]    [k] ext4_file_write_iter
+     1.35%  node     [kernel.kallsyms]    [k] finish_task_switch
+     1.35%  node     [kernel.kallsyms]    [k] free_pages_and_swap_cache
+     1.35%  node     [kernel.kallsyms]    [k] kmem_cache_free
+     1.35%  node     [kernel.kallsyms]    [k] put_dec_trunc8
+     1.35%  node     [kernel.kallsyms]    [k] zap_pte_range.isra.0
+     1.35%  node     libc-2.31.so         [.] _IO_file_xsputn@@GLIBC_2.2.5
+     1.35%  node     libc-2.31.so         [.] __memcmp_avx2_movbe
+     1.35%  node     libc-2.31.so         [.] __memmove_avx_unaligned_erms
+     1.35%  node     libstdc++.so.6.0.28  [.] operator new
+     1.35%  node     libstdc++.so.6.0.28  [.] std::string::_M_mutate
+     1.35%  node     node                 [.] Builtins_StaNamedPropertyHandler
+     1.35%  node     node                 [.] offsetTOCLookupFn
+     1.35%  node     node                 [.] std::__find_if<unsigned short const*, __gnu_cxx::__ops::_Iter_pred<v8::internal::Utf16CharacterStream::AdvanceUntil<v8::internal::Scanner::ScanIdentifierOrKeywordInner()::{lambda(int)#1}>(v8::internal::Scanner::ScanIdentifierOrKeywordInner()::{lambda(int)#1})::{lambda(unsigned short)#1}> >
+     1.35%  node     node                 [.] v8::Function::SetName
+     1.35%  node     node                 [.] v8::internal::AstValueFactory::GetOneByteStringInternal
+     1.35%  node     node                 [.] v8::internal::BaseNameDictionary<v8::internal::NameDictionary, v8::internal::NameDictionaryShape>::CopyEnumKeysTo
+     1.35%  node     node                 [.] v8::internal::CompilerDispatcher::IsEnabled
+     1.35%  node     node                 [.] v8::internal::CopyChars<unsigned char, unsigned short>
+     1.35%  node     node                 [.] v8::internal::ExpressionScope<v8::internal::ParserTypes<v8::internal::Parser> >::NewVariable
+     1.35%  node     node                 [.] v8::internal::ExpressionScope<v8::internal::ParserTypes<v8::internal::PreParser> >::RecordDeclarationError
+     1.35%  node     node                 [.] v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::FindEntry
+     1.35%  node     node                 [.] v8::internal::Map::WrapFieldType
+     1.35%  node     node                 [.] v8::internal::PagedSpace::AllocateRaw
+     1.35%  node     node                 [.] v8::internal::ParserBase<v8::internal::Parser>::ParseArguments
+     1.35%  node     node                 [.] v8::internal::ParserBase<v8::internal::Parser>::ParseAssignmentExpressionCoverGrammar
+     1.35%  node     node                 [.] v8::internal::ParserBase<v8::internal::Parser>::ParseBinaryContinuation
+     1.35%  node     node                 [.] v8::internal::ParserBase<v8::internal::Parser>::ParseFunctionBody
+     1.35%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseArrowFunctionLiteral
+     1.35%  node     node                 [.] v8::internal::PreParser::GetIdentifier
+     1.35%  node     node                 [.] v8::internal::Runtime_StoreIC_Miss
+     1.35%  node     node                 [.] v8::internal::Serializer::ObjectSerializer::Serialize
+     1.35%  node     node                 [.] v8::internal::Serializer::ObjectSerializer::SerializeObject
+     1.35%  node     node                 [.] v8::internal::Serializer::ObjectSerializer::VisitPointers
+     1.35%  node     node                 [.] v8::internal::SourcePositionTableIterator::Advance
+     1.35%  node     node                 [.] v8::internal::StringShape::DispatchToSpecificTypeWithoutCast<v8::internal::StringShape::DispatchToSpecificType<v8::internal::String::Get(int)::StringGetDispatcher, unsigned short, int&>(v8::internal::String, int&)::CastingDispatcher, unsigned short, v8::internal::String&, int&>
+     1.35%  node     node                 [.] v8::internal::StringTable::LookupStringIfExists_NoAllocate
+     1.35%  node     node                 [.] v8::internal::Zone::Zone
+     1.35%  node     node                 [.] v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterTransfer
+     1.35%  node     node                 [.] v8::internal::interpreter::Register::is_current_context
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

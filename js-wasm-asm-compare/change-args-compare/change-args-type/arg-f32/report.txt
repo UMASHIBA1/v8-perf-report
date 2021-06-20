@@ -1,0 +1,70 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 69  of event 'cpu-clock:pppH'
+# Event count (approx.): 17250000
+#
+# Overhead  Command  Shared Object      Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+# ........  .......  .................  ..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+     7.25%  node     node               [.] uv__async_io.part.1
+     5.80%  node     node               [.] v8::internal::Scanner::Next
+     4.35%  node     [kernel.kallsyms]  [k] __lock_text_start
+     2.90%  node     [kernel.kallsyms]  [k] __prepare_exit_to_usermode
+     2.90%  node     [kernel.kallsyms]  [k] clear_page_orig
+     2.90%  node     [kernel.kallsyms]  [k] queue_work_on
+     2.90%  node     node               [.] Cr_z_inflate_fast
+     2.90%  node     node               [.] v8::internal::CalculateLineEndsImpl<unsigned char>
+     2.90%  node     node               [.] v8::internal::Serializer::ObjectSerializer::VisitPointers
+     1.45%  node     [kernel.kallsyms]  [k] common_perm_cond
+     1.45%  node     [kernel.kallsyms]  [k] free_unref_page_list
+     1.45%  node     [kernel.kallsyms]  [k] lru_cache_add
+     1.45%  node     [kernel.kallsyms]  [k] mem_cgroup_from_task
+     1.45%  node     [kernel.kallsyms]  [k] rmqueue
+     1.45%  node     [kernel.kallsyms]  [k] up_write
+     1.45%  node     libc-2.31.so       [.] __strlen_avx2
+     1.45%  node     libc-2.31.so       [.] _int_malloc
+     1.45%  node     node               [.] Builtins_CallUndefinedReceiver2Handler
+     1.45%  node     node               [.] node::Environment::AddUnmanagedFd
+     1.45%  node     node               [.] std::_Hashtable<std::string, std::pair<std::string const, node::options_parser::OptionsParser<node::PerIsolateOptions>::OptionInfo>, std::allocator<std::pair<std::string const, node::options_parser::OptionsParser<node::PerIsolateOptions>::OptionInfo> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_unique_node
+     1.45%  node     node               [.] std::__find_if<unsigned short const*, __gnu_cxx::__ops::_Iter_pred<v8::internal::Utf16CharacterStream::AdvanceUntil<v8::internal::Scanner::ScanIdentifierOrKeywordInner()::{lambda(int)#1}>(v8::internal::Scanner::ScanIdentifierOrKeywordInner()::{lambda(int)#1})::{lambda(unsigned short)#1}> >
+     1.45%  node     node               [.] v8::Value::ToString
+     1.45%  node     node               [.] v8::base::TemplateHashMapImpl<long, unsigned int, v8::base::KeyEqualityMatcher<long>, v8::internal::ZoneAllocationPolicy>::Resize
+     1.45%  node     node               [.] v8::internal::(anonymous namespace)::AddDescriptorsByTemplate
+     1.45%  node     node               [.] v8::internal::(anonymous namespace)::CreateObjectLiteral
+     1.45%  node     node               [.] v8::internal::BigInt::InplaceMultiplyAdd
+     1.45%  node     node               [.] v8::internal::ClassBoilerplate::BuildClassBoilerplate<v8::internal::Isolate>
+     1.45%  node     node               [.] v8::internal::DeclarationScope::CheckConflictingVarDeclarations
+     1.45%  node     node               [.] v8::internal::FactoryBase<v8::internal::Factory>::NewFixedArrayWithFiller
+     1.45%  node     node               [.] v8::internal::FuncNameInferrer::PushVariableName
+     1.45%  node     node               [.] v8::internal::IC::TraceIC
+     1.45%  node     node               [.] v8::internal::LookupIterator::ApplyTransitionToDataProperty
+     1.45%  node     node               [.] v8::internal::LookupIterator::PrepareForDataProperty
+     1.45%  node     node               [.] v8::internal::LookupIterator::WriteDataValue
+     1.45%  node     node               [.] v8::internal::PagedSpace::AllocateRaw
+     1.45%  node     node               [.] v8::internal::ParserBase<v8::internal::Parser>::ParseArrowFunctionLiteral
+     1.45%  node     node               [.] v8::internal::ParserBase<v8::internal::Parser>::ParseLeftHandSideContinuation
+     1.45%  node     node               [.] v8::internal::ParserBase<v8::internal::Parser>::ParsePrimaryExpression
+     1.45%  node     node               [.] v8::internal::PreParser::ParseFunctionLiteral
+     1.45%  node     node               [.] v8::internal::Scanner::SkipSingleLineComment
+     1.45%  node     node               [.] v8::internal::ScopeInfo::ContextSlotIndex
+     1.45%  node     node               [.] v8::internal::ScopedList<v8::internal::Expression*, void*>::CopyTo
+     1.45%  node     node               [.] v8::internal::Script::FindSharedFunctionInfo<v8::internal::Isolate>
+     1.45%  node     node               [.] v8::internal::Script::GetColumnNumber
+     1.45%  node     node               [.] v8::internal::Serializer::SerializeBackReference
+     1.45%  node     node               [.] v8::internal::Serializer::SerializeRoot
+     1.45%  node     node               [.] v8::internal::SharedFunctionInfo::ScriptIterator::Next
+     1.45%  node     node               [.] v8::internal::SnapshotByteSink::PutInt
+     1.45%  node     node               [.] v8::internal::String::ComputeAndSetHash
+     1.45%  node     node               [.] v8::internal::VariableProxy::BindTo
+     1.45%  node     node               [.] v8::internal::interpreter::BytecodeArrayBuilder::CallUndefinedReceiver
+     1.45%  node     node               [.] v8::internal::interpreter::BytecodeArrayBuilder::EmitFunctionStartSourcePosition
+     1.45%  node     node               [.] v8::internal::interpreter::BytecodeArrayBuilder::LoadLiteral
+     1.45%  node     node               [.] v8::internal::interpreter::BytecodeArrayBuilder::MoveRegister
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
