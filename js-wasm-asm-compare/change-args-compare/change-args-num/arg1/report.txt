@@ -1,0 +1,64 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 68  of event 'cpu-clock:pppH'
+# Event count (approx.): 17000000
+#
+# Overhead  Command  Shared Object      Symbol                                                                                                                                                                                                                                                                                                                         
+# ........  .......  .................  ...............................................................................................................................................................................................................................................................................................................................
+#
+    11.76%  node     [kernel.kallsyms]  [k] __lock_text_start
+    11.76%  node     node               [.] v8::internal::Scanner::Next
+     2.94%  node     [kernel.kallsyms]  [k] __prepare_exit_to_usermode
+     2.94%  node     [kernel.kallsyms]  [k] clear_page_orig
+     2.94%  node     [kernel.kallsyms]  [k] copy_user_generic_unrolled
+     2.94%  node     [kernel.kallsyms]  [k] native_write_msr
+     2.94%  node     [kernel.kallsyms]  [k] queue_work_on
+     2.94%  node     node               [.] v8::internal::CalculateLineEndsImpl<unsigned char>
+     1.47%  node     [kernel.kallsyms]  [k] __alloc_pages_nodemask
+     1.47%  node     [kernel.kallsyms]  [k] __mark_inode_dirty
+     1.47%  node     [kernel.kallsyms]  [k] __raw_spin_unlock_irq
+     1.47%  node     [kernel.kallsyms]  [k] do_user_addr_fault
+     1.47%  node     [kernel.kallsyms]  [k] prep_new_page
+     1.47%  node     ld-2.31.so         [.] do_lookup_x
+     1.47%  node     libc-2.31.so       [.] malloc
+     1.47%  node     node               [.] Builtins_CallProperty1Handler
+     1.47%  node     node               [.] Builtins_DeleteProperty
+     1.47%  node     node               [.] Builtins_InterpreterEntryTrampoline
+     1.47%  node     node               [.] Cr_z_adler32_z
+     1.47%  node     node               [.] std::vector<std::string, std::allocator<std::string> >::_M_realloc_insert<std::string>
+     1.47%  node     node               [.] std::vector<v8::internal::ParserBase<v8::internal::Parser>::DeclarationParsingResult::Declaration, std::allocator<v8::internal::ParserBase<v8::internal::Parser>::DeclarationParsingResult::Declaration> >::_M_realloc_insert<v8::internal::ParserBase<v8::internal::Parser>::DeclarationParsingResult::Declaration const&>
+     1.47%  node     node               [.] ucnv_io_getConverterName_69
+     1.47%  node     node               [.] v8::internal::AstValueFactory::GetOneByteStringInternal
+     1.47%  node     node               [.] v8::internal::BufferedZoneList<v8::internal::RegExpTree, 2>::Add
+     1.47%  node     node               [.] v8::internal::DeclarationScope::DeclareDefaultFunctionVariables
+     1.47%  node     node               [.] v8::internal::DeclarationScope::DeclareFunctionVar
+     1.47%  node     node               [.] v8::internal::ExpressionScope<v8::internal::ParserTypes<v8::internal::PreParser> >::NewVariable
+     1.47%  node     node               [.] v8::internal::Factory::InitializeMap
+     1.47%  node     node               [.] v8::internal::FeedbackMetadata::New<v8::internal::Isolate>
+     1.47%  node     node               [.] v8::internal::HashTable<v8::internal::NameDictionary, v8::internal::NameDictionaryShape>::Rehash
+     1.47%  node     node               [.] v8::internal::JSObject::DefineOwnPropertyIgnoreAttributes
+     1.47%  node     node               [.] v8::internal::Map::SetInstanceDescriptors
+     1.47%  node     node               [.] v8::internal::PagedSpace::SizeOfObjects
+     1.47%  node     node               [.] v8::internal::ParserBase<v8::internal::Parser>::ParseBinaryContinuation
+     1.47%  node     node               [.] v8::internal::ParserBase<v8::internal::Parser>::ParsePossibleDestructuringSubPattern
+     1.47%  node     node               [.] v8::internal::ParserBase<v8::internal::Parser>::ParsePrimaryExpression
+     1.47%  node     node               [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseAssignmentExpressionCoverGrammar
+     1.47%  node     node               [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseStatementListItem
+     1.47%  node     node               [.] v8::internal::SerializedCodeData::SanityCheck
+     1.47%  node     node               [.] v8::internal::Serializer::ObjectSerializer::SerializePrologue
+     1.47%  node     node               [.] v8::internal::Serializer::ObjectSerializer::VisitPointers
+     1.47%  node     node               [.] v8::internal::Serializer::SerializeBackReference
+     1.47%  node     node               [.] v8::internal::SnapshotByteSink::PutInt
+     1.47%  node     node               [.] v8::internal::Utf8Decoder::Utf8Decoder
+     1.47%  node     node               [.] v8::internal::Zone::~Zone
+     1.47%  node     node               [.] v8::internal::compiler::Pipeline::NewWasmHeapStubCompilationJob
+     1.47%  node     node               [.] v8::internal::interpreter::BytecodeArrayBuilder::PushContext
+     1.47%  node     node               [.] v8::internal::interpreter::BytecodeRegisterOptimizer::PrepareOutputRegister
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

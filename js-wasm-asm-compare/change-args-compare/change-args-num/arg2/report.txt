@@ -1,0 +1,80 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 91  of event 'cpu-clock:pppH'
+# Event count (approx.): 22750000
+#
+# Overhead  Command  Shared Object        Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+# ........  .......  ...................  ...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+     7.69%  node     [kernel.kallsyms]    [k] __lock_text_start
+     7.69%  node     node                 [.] v8::internal::Scanner::Next
+     4.40%  node     libc-2.31.so         [.] __strlen_avx2
+     4.40%  node     node                 [.] std::__find_if<unsigned short const*, __gnu_cxx::__ops::_Iter_pred<v8::internal::Utf16CharacterStream::AdvanceUntil<v8::internal::Scanner::ScanIdentifierOrKeywordInner()::{lambda(int)#1}>(v8::internal::Scanner::ScanIdentifierOrKeywordInner()::{lambda(int)#1})::{lambda(unsigned short)#1}> >
+     3.30%  node     node                 [.] v8::internal::CopyChars<unsigned char, unsigned short>
+     3.30%  node     node                 [.] v8::internal::SerializedCodeData::SanityCheck
+     2.20%  node     [kernel.kallsyms]    [k] __prepare_exit_to_usermode
+     2.20%  node     [kernel.kallsyms]    [k] clear_page_orig
+     2.20%  node     ld-2.31.so           [.] _dl_lookup_symbol_x
+     2.20%  node     node                 [.] v8::internal::CalculateLineEndsImpl<unsigned char>
+     2.20%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseBinaryContinuation
+     1.10%  node     [kernel.kallsyms]    [k] __handle_mm_fault
+     1.10%  node     [kernel.kallsyms]    [k] __mod_lruvec_state
+     1.10%  node     [kernel.kallsyms]    [k] __raw_spin_unlock_irq
+     1.10%  node     [kernel.kallsyms]    [k] ext4_inode_csum_set
+     1.10%  node     [kernel.kallsyms]    [k] handle_mm_fault
+     1.10%  node     [kernel.kallsyms]    [k] mark_page_accessed
+     1.10%  node     [kernel.kallsyms]    [k] mpt_put_msg_frame
+     1.10%  node     [kernel.kallsyms]    [k] queue_work_on
+     1.10%  node     [kernel.kallsyms]    [k] rmqueue
+     1.10%  node     [kernel.kallsyms]    [k] security_inode_getattr
+     1.10%  node     [kernel.kallsyms]    [k] unlock_page
+     1.10%  node     [kernel.kallsyms]    [k] xas_load
+     1.10%  node     ld-2.31.so           [.] do_lookup_x
+     1.10%  node     libc-2.31.so         [.] __memmove_avx_unaligned_erms
+     1.10%  node     libc-2.31.so         [.] __strcmp_avx2
+     1.10%  node     libc-2.31.so         [.] _int_free
+     1.10%  node     libc-2.31.so         [.] _int_malloc
+     1.10%  node     libstdc++.so.6.0.28  [.] std::_Rb_tree_insert_and_rebalance
+     1.10%  node     node                 [.] Builtins_ObjectGetOwnPropertyNames
+     1.10%  node     node                 [.] Builtins_WeakMapConstructor
+     1.10%  node     node                 [.] _GLOBAL__sub_I__ZN4node16NodeMainInstance23GetEmbeddedSnapshotBlobEv
+     1.10%  node     node                 [.] offsetTOCLookupFn
+     1.10%  node     node                 [.] std::_Rb_tree<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*>, std::pair<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> const, int>, std::_Select1st<std::pair<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> const, int> >, std::less<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> >, v8::internal::ZoneAllocator<std::pair<std::tuple<v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache::SlotKind, int, void const*> const, int> > >::find
+     1.10%  node     node                 [.] v8::base::TemplateHashMapImpl<unsigned long, unsigned int, v8::base::KeyEqualityMatcher<long>, v8::base::DefaultAllocationPolicy>::FillEmptyEntry
+     1.10%  node     node                 [.] v8::internal::(anonymous namespace)::FinalizeUnoptimizedCompilation
+     1.10%  node     node                 [.] v8::internal::(anonymous namespace)::InstantiateObject
+     1.10%  node     node                 [.] v8::internal::BodyDescriptorApply<v8::internal::CallIterateBody, void, v8::internal::Map, v8::internal::HeapObject, int, v8::internal::ObjectVisitor*>
+     1.10%  node     node                 [.] v8::internal::CalculateLineEndsImpl<unsigned short>
+     1.10%  node     node                 [.] v8::internal::Code::Disassemble
+     1.10%  node     node                 [.] v8::internal::DeclarationScope::CheckConflictingVarDeclarations
+     1.10%  node     node                 [.] v8::internal::DependentCode::DeoptimizeDependentCodeGroup
+     1.10%  node     node                 [.] v8::internal::EmbeddedData::InstructionStartOfBuiltin
+     1.10%  node     node                 [.] v8::internal::FieldType::Any
+     1.10%  node     node                 [.] v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::EntryForProbe
+     1.10%  node     node                 [.] v8::internal::HeapObject::RehashBasedOnMap
+     1.10%  node     node                 [.] v8::internal::IncrementalMarking::IncrementalMarking
+     1.10%  node     node                 [.] v8::internal::Isolate::InitWithSnapshot
+     1.10%  node     node                 [.] v8::internal::LoadIC::Load
+     1.10%  node     node                 [.] v8::internal::LookupIterator::PrepareForDataProperty
+     1.10%  node     node                 [.] v8::internal::OptimizedCompilationInfo::GetDebugName
+     1.10%  node     node                 [.] v8::internal::Parser::ParseFunction
+     1.10%  node     node                 [.] v8::internal::Parser::ParseFunctionLiteral
+     1.10%  node     node                 [.] v8::internal::ParserBase<v8::internal::Parser>::ParseVariableDeclarations
+     1.10%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::DoParseMemberExpressionContinuation
+     1.10%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::Expect
+     1.10%  node     node                 [.] v8::internal::ParserBase<v8::internal::PreParser>::ParseExpressionOrLabelledStatement
+     1.10%  node     node                 [.] v8::internal::Scavenger::IterateAndScavengePromotedObject
+     1.10%  node     node                 [.] v8::internal::Scope::DeclareVariableName
+     1.10%  node     node                 [.] v8::internal::Serializer::ObjectSerializer::VisitPointers
+     1.10%  node     node                 [.] v8::internal::Sweeper::PauseOrCompleteScope::PauseOrCompleteScope
+     1.10%  node     node                 [.] v8::internal::TransitionsAccessor::Insert
+     1.10%  node     node                 [.] v8::internal::interpreter::BytecodeGenerator::VisitLogicalOrExpression
+     1.10%  node     node                 [.] v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterTransfer
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
