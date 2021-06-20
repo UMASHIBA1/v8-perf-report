@@ -5,6 +5,7 @@ compiler = turbofan
 address = 0x320f8e682e41
 
 Instructions (size = 144)
+;; 識別子:1, ------変更なし部分
 0x320f8e682ea0     0  55             push rbp
 0x320f8e682ea1     1  4889e5         REX.W movq rbp,rsp
 0x320f8e682ea4     4  56             push rsi
@@ -13,16 +14,28 @@ Instructions (size = 144)
 0x320f8e682eaa     a  488b5f17       REX.W movq rbx,[rdi+0x17]
 0x320f8e682eae     e  488b5b07       REX.W movq rbx,[rbx+0x7]
 0x320f8e682eb2    12  488b530f       REX.W movq rdx,[rbx+0xf]
+;; ----- ここまで変更なし
+
+
 0x320f8e682eb6    16  488955e8       REX.W movq [rbp-0x18],rdx
 0x320f8e682eba    1a  488b4510       REX.W movq rax,[rbp+0x10]
 0x320f8e682ebe    1e  a801           test al,0x1
 0x320f8e682ec0    20  0f8545000000   jnz 0x320f8e682f0b  <+0x6b>
 0x320f8e682ec6    26  48c1e820       REX.W shrq rax, 32
+
+
+;; 識別子:2, ------変更なし部分
 0x320f8e682eca    2a  488b4a77       REX.W movq rcx,[rdx+0x77]
 0x320f8e682ece    2e  488b89c0320000 REX.W movq rcx,[rcx+0x32c0]
 0x320f8e682ed5    35  c70101000000   movl [rcx],0x1
+;; -----変更なし部分終わり
+
+
 0x320f8e682edb    3b  488b4a7f       REX.W movq rcx,[rdx+0x7f]
 0x320f8e682edf    3f  48635b1b       REX.W movsxlq rbx,[rbx+0x1b]
+
+
+;; 識別子:3, ------変更なし部分
 0x320f8e682ee3    43  4803d9         REX.W addq rbx,rcx
 0x320f8e682ee6    46  488bf2         REX.W movq rsi,rdx
 0x320f8e682ee9    49  ffd3           call rbx
@@ -30,10 +43,19 @@ Instructions (size = 144)
 0x320f8e682eef    4f  488b5b77       REX.W movq rbx,[rbx+0x77]
 0x320f8e682ef3    53  488b9bc0320000 REX.W movq rbx,[rbx+0x32c0]
 0x320f8e682efa    5a  c70300000000   movl [rbx],0x0
+;; -----変更なし部分終わり
+
+
 0x320f8e682f00    60  48c1e020       REX.W shlq rax, 32
+
+
+;; 識別子:4, ------変更なし部分
 0x320f8e682f04    64  488be5         REX.W movq rsp,rbp
 0x320f8e682f07    67  5d             pop rbp
 0x320f8e682f08    68  c21000         ret 0x10
+;; ------変更なし部分終わり
+
+
 0x320f8e682f0b    6b  48895de0       REX.W movq [rbp-0x20],rbx
 0x320f8e682f0f    6f  48b9000000007f030000 REX.W movq rcx,0x37f00000000
 0x320f8e682f19    79  48c1f920       REX.W sarq rcx, 32
