@@ -47,7 +47,7 @@ sudo perf report > report.txt
 
 AssemblyScript
 ```
-export function arg2(a: i32, b: i32): i32 {
+export function argf32(a: f32): f32 {
   return 0;
 }
 ```
@@ -60,7 +60,7 @@ const imports = { /* imports go here */ };
 const wasmModule = loader.instantiateSync(fs.readFileSync(__dirname + "/build/optimized.wasm"), imports);
 module.exports = wasmModule.exports;
 
-const result = module.exports.arg2(1,2);
+const result = module.exports.argf32(1.0);
 
 console.log(result);
 ```
