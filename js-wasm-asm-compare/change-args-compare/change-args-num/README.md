@@ -1,6 +1,17 @@
 # 引数の数の違いによるアセンブリの変化を調べる
 引数の数を変えた場合jsとwasmの橋渡しの部分がどんな形で変わるのか調べる
 
+## 実行環境
+
+```
+Window上のVMWare Workstation 16 Player上のUbuntu20.04.2 LTS
+Memory 8GB割り当て
+Processor Intel® Core™ i7-9700 CPU @ 3.00GHzの2コアを割り当て
+```
+
+<img src="https://user-images.githubusercontent.com/49422601/119885136-63670080-bf6c-11eb-8948-6f6aa17e5a34.png" width="600px">
+
+
 ## 対象コード(引数が２つ)
 
 AssemblyScript
