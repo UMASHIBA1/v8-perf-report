@@ -43,7 +43,7 @@ sudo perf report > report.txt
 
 
 
-## 対象コード(引数が２つ)
+## 対象コード(引数が1つ)
 
 AssemblyScript
 ```
